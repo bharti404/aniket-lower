@@ -26,26 +26,73 @@ import BrandCreator from "./BrandCreator";
 const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-  const logoRef = useRef(null);
+
+
+
+
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
+  //     const scrollPosition = window.scrollY; // Current scroll position
+  //     const viewportHeight = window.innerHeight; // Total viewport height
+  //     const triggerHeight = viewportHeight * 0.22; // 22% of the viewport height
+
+  //     if (scrollPosition > triggerHeight) {
+  //       setIsVisible(true);
+  //     }
+
+  //     if (scrollY > triggerHeight) {
+  //       setIsVisible(true);
+  //     }
+
+  //     if( scrollY < triggerHeight){
+  //       setIsVisible(false);
+  //     }
+
+  //     if( scrollPosition > triggerHeight && time after 2 seconds){
+  //       setIsVisible(false);
+  //     }
+  //   };
+
+
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+
+  const timeoutRef = useRef(null);
+
+
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const scrollPosition = window.scrollY; // Current scroll position
-      const viewportHeight = window.innerHeight; // Total viewport height
-      const triggerHeight = viewportHeight * 0.22; // 22% of the viewport height
+      const triggerHeight = window.innerHeight * 0.22;
 
-      if (scrollPosition > triggerHeight) {
-        setIsVisible(true);
-      }
-
-      if (logoRef.current) {
-        const rotateY = scrollY % 360;
-        logoRef.current.style.transform = `rotateY(${rotateY}deg)`; // 3D Y-axis rotation
-      }
-
+      // ✅ If user scrolls past trigger → show
       if (scrollY > triggerHeight) {
         setIsVisible(true);
+
+        // ✅ Reset previous timer
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+        // ✅ After 2 seconds → hide automatically
+        timeoutRef.current = setTimeout(() => {
+          setIsVisible(false);
+        }, 2000);
+      }
+
+      // ✅ If user goes back above trigger → hide instantly
+      if (scrollY <= triggerHeight) {
+        setIsVisible(false);
+
+        // ✅ also clear timer
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
       }
     };
 
@@ -53,9 +100,9 @@ const Homepage = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
-
   return (
     <div className="homepage-container">
       <Navbar />
@@ -79,7 +126,6 @@ const Homepage = () => {
             <img
               src={LowerCaseLogo}
               alt="Lowercase Logo"
-              ref={logoRef}
               className="rotating-logo"
             />
           </div>
@@ -89,17 +135,14 @@ const Homepage = () => {
               Transforming The scene, one Event <br /> at a Time since 2010 _
             </p>
             <p className="vdohome_contentone">
-              Founded in 2010, Lowercase Events has become a leading name in the
-              student nightlife scene. Specialising in unforgettable club nights
-              and unique experiences, we’ ve spent over a decade curating events
-              that celebrate youth culture, diversity, and creativity
+              Lowercase Events exists for the nights you remember and the ones
+              you don’t. We blend the right music, the right crowd, and the
+              right atmosphere to create experiences that feel authentic,
+              high-energy, and unmistakably now.
             </p>
 
             <p className="vdohome_contenttwo">
-              Our mission is to provide a space where students can connect, let
-              loose, and make memories. From iconic DJ performances to exclusive
-              takeovers, we strive to create experiences that resonate with the
-              next generation of partygoers
+              This isn’t background noise - this is student culture in motion.
             </p>
           </div>
         </div>
