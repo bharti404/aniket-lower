@@ -54,13 +54,13 @@ const Footer = () => {
           <div className="footer-box4">
             <ul>
               <li>
-                <Link to="/">Email us</Link>
+                <Link to="/">Contact Us</Link>
+              </li>
+              <li>
+                <Link to="/">FAQ's</Link>
               </li>
               <li>
                 <Link to="/">Group Bookings</Link>
-              </li>
-              <li>
-                <Link to="/">University Partners</Link>
               </li>
               <li>
                 <Link to="/">Birthdays</Link>
@@ -68,37 +68,31 @@ const Footer = () => {
               <li>
                 <Link to="/">Societies</Link>
               </li>{" "}
-              <li>
-                <Link to="/">FAQ's</Link>
-              </li>
-              <li>
-                <Link to="/">Playlist</Link>
-              </li>
-              <li>
-                <Link to="/">Our Story</Link>
-              </li>
             </ul>
           </div>
 
           <div className="footer-box4">
             <ul>
               <li>
-                <Link to="/">Carrers</Link>
-              </li>
-              <li>
-                <Link to="/">Partners</Link>
-              </li>
-              <li>
-                <Link to="/">University Partners</Link>
+                <Link to="/">Venues</Link>
               </li>
               <li>
                 <Link to="/">Our Network</Link>
+              </li>
+              <li>
+                <Link to="/">UGR</Link>
+              </li>
+              <li>
+                <Link to="/">University Partners</Link>
               </li>{" "}
               <li>
                 <Link to="/">University Partners</Link>
               </li>{" "}
               <li>
-                <Link to="/">FAQ's</Link>
+                <Link to="/">Advertise with us</Link>
+              </li>
+              <li>
+                <Link to="/">Careers</Link>
               </li>
             </ul>
           </div>
@@ -109,7 +103,25 @@ const Footer = () => {
             <div className="social-icons">
               <ul>
                 <li>
-                  <a href="/"> Instagam </a>
+                  <a
+                    href="/www.instagram.com/lowercaseevents"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    Instagam{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/https://www.tiktok.com/@lowercaseevents"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    TikTok{" "}
+                  </a>
                 </li>
 
                 <li>
@@ -124,19 +136,36 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <a href="/"> Facebook </a>
+                  <a
+                    href="/https://www.facebook.com/lowercaselondon"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    Facebook{" "}
+                  </a>
                 </li>
 
                 <li>
-                  <a href="/"> Fatsoma </a>
+                  <a
+                    href="/https://www.youtube.com/@lowercase.events"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    Youtube{" "}
+                  </a>
                 </li>
 
                 <li>
-                  <a href="/"> Youtube </a>
-                </li>
-
-                <li>
-                  <a href="/"> Vimeo </a>
+                  <a
+                    href="/https://vimeo.com/yourfreshersguide"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    Vimeo{" "}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -152,7 +181,7 @@ const Footer = () => {
 
         <ul>
           <li>
-            <Link to={"/privacy-policy"} >Privacy Policy</Link>
+            <Link to={"/privacy-policy"}>Privacy Policy</Link>
 
             <Link to={"/terms-and-conditions"}>Terms & Conditions</Link>
           </li>
