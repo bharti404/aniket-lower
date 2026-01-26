@@ -19,21 +19,10 @@ const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-
   useEffect(() => {
-
     setTimeout(() => {
       setIsVisible(true);
-      
-    }, 2000);
-
-    setTimeout(() => {
-      setIsVisible(false);
-    }, 10000);
-
-
-
-
+    }, 500);
   }, []);
   return (
     <div className="homepage-container">
@@ -63,16 +52,15 @@ const Homepage = () => {
           </div>
 
           <div className="vdo_home_content_text">
-            <p className="vdoheadhomepage">
-              Transforming The scene, one Event <br /> at a Time since 2010 _
-            </p>
             <p className="vdohome_contentone">
-            Lowercase Events exists for the nights you remember and the ones you don’t. We blend the right music, the right crowd, and the right atmosphere to create experiences that feel authentic, culturally relevant, and intentional.
-
+              Lowercase Events exists for the nights you remember and the ones
+              you don’t. We blend the right music, the right crowd, and the
+              right atmosphere to create experiences that feel authentic,
+              culturally relevant, and intentional.
             </p>
 
-            <p className="vdohome_contenttwo">
-            Trusted by leading venues, artists, and partners.
+            <p className="vdoheadhomepage">
+              Trusted by leading venues, artists, and partners.
             </p>
           </div>
         </div>
