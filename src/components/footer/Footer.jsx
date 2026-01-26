@@ -104,7 +104,7 @@ const Footer = () => {
               <ul>
                 <li>
                   <a
-                    href="/www.instagram.com/lowercaseevents"
+                    href="https://www.instagram.com/lowercaseevents"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -115,7 +115,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/https://www.tiktok.com/@lowercaseevents"
+                    href="https://www.tiktok.com/@lowercaseevents"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -137,7 +137,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/https://www.facebook.com/lowercaselondon"
+                    href="https://www.facebook.com/lowercaselondon"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -148,7 +148,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/https://www.youtube.com/@lowercase.events"
+                    href="https://www.youtube.com/@lowercase.events"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -159,7 +159,7 @@ const Footer = () => {
 
                 <li>
                   <a
-                    href="/https://vimeo.com/yourfreshersguide"
+                    href="https://vimeo.com/yourfreshersguide"
                     target="_blank"
                     rel="noreferrer"
                   >
