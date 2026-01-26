@@ -19,7 +19,7 @@
 
 .prefooter_main_left img {
   width: 90%;
-  height: 10vh;
+
   object-fit: cover;
   margin: 10px 00;
 }
@@ -88,10 +88,7 @@
   font-size: 18px;
   border-radius: 5px;
 }
-.prefooter_main_left_bottom img,
-.prefooter_main_left_top img {
-  height: 100px;
-}
+
 
 
 

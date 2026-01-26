@@ -11,22 +11,6 @@ const Artists = () => {
   return (
     <>
       <div className="home_artists_section">
-        {/* 🔁 Marquee Section */}
-        {/* <div className="marquee_wrapper">
-      {Array.from({ length: 16}).map((_, index) => (
-        <div
-          key={index}
-          className={`marquee_row ${index % 2 === 0 ? "normal" : "reverse"}`}
-        >
-          <div className="marquee_text">
-            <span>{ArtistName}</span>
-            <span>{ArtistName}</span>
-            <span>{ArtistName}</span>
-          </div>
-        </div>
-      ))}
-    </div> */}
-
         {/* Foreground Content */}
         <div className="home_artist_content">
           <div className="home_artist_name_items">
@@ -34,17 +18,13 @@ const Artists = () => {
           </div>
 
           <MagneticCards />
+        </div>
 
-          {/* <div className="artist_cards_container">
-          <Artiststylescards />
-           </div> */}
-           
+        <div className="vwall-artists-btn">
+          <button className="full_lineup_button">View All Artists</button>
         </div>
       </div>
-      <div className="bottom_row">
-        <div className="left_text">FOLLOW US ON INSTAGRAM</div>
-        <button className="full_lineup_button">VIEW THE FULL LINE UP</button>
-      </div>
+
     </>
   );
 };

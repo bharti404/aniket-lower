@@ -1,0 +1,151 @@
+.termsPage {
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 70px 18px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .termsContainer {
+    width: min(1000px, 95vw);
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .termsHeader {
+    margin-bottom: 24px;
+  }
+  
+  .termsTitle {
+    font-size: clamp(22px, 2.4vw, 36px);
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+  }
+  
+  .termsSub {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 1.6;
+  }
+  
+  /* Important Box */
+  .termsImportant {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+    padding: 14px 16px;
+    border-radius: 12px;
+    margin-bottom: 26px;
+  }
+  
+  .termsImportant p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .termsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .termsSection {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 18px;
+    border-radius: 14px;
+  }
+  
+  .termsSection h2 {
+    font-size: 16px;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  
+  .termsSection p {
+    margin: 0 0 10px 0;
+    line-height: 1.75;
+    font-size: 14px;
+    opacity: 0.92;
+  }
+  
+  .point {
+    font-weight: 700;
+    margin-right: 8px;
+    opacity: 1;
+  }
+  
+  /* Lists */
+  .termsList {
+    padding-left: 18px;
+    margin: 0 0 12px 0;
+  }
+  
+  .termsList li {
+    line-height: 1.75;
+    font-size: 14px;
+    opacity: 0.92;
+    margin: 6px 0;
+  }
+  
+  /* Definitions */
+  .termsDefinitionGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 12px 0 14px 0;
+  }
+  
+  .defItem {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 12px;
+  }
+  
+  .defTitle {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  
+  .defText {
+    display: block;
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.7;
+  }
+  
+  /* Highlight clause 10 */
+  .termsDanger {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 0, 0, 0.07);
+  }
+  
+  /* Footer */
+  .termsFooter {
+    margin-top: 30px;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 13px;
+  }
+  
+  @media (max-width: 600px) {
+    .termsPage {
+      padding: 55px 14px;
+    }
+  
+    .termsSection {
+      padding: 14px;
+    }
+  
+    .termsTitle {
+      letter-spacing: 0.3px;
+    }
+  }
+  

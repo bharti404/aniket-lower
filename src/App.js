@@ -77,6 +77,8 @@ import Artistdetail from "./components/artist/Artistdetail";
 import NewArtist from "./components/NewArtist/NewArtist";
 import Login from "./components/admin/Album/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
+import PrivacyPolicy from "./components/Pages/Privacypolicies/PrivacyPolicy";
+import TermsAndConditions from "./components/Pages/Termsandconditions/TermsAndConditions";
 
 function App() {
   return (
@@ -98,6 +100,10 @@ function App() {
         <Route path="/albums" element={<Albumshow />} />
 
         <Route path="/photobyalbum/:id" element={<Photobyalbum />} />
+
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
 
         {/* <Route path="/admin" element={<AlbumUpload />} /> */}
 

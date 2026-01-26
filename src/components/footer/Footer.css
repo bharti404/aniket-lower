@@ -23,13 +23,13 @@
 
 .lisenced-note {
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 900;
   text-align: center;
 }
 .lisenced-note a {
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 900;
 }
 
@@ -54,7 +54,7 @@
 }
 .footer-box1 ul li,
 .footer-box4 ul li {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .footer-box1 ul li a,
@@ -107,7 +107,7 @@
   text-decoration: none;
   margin: 00 5px;
   font-weight: 900;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 .footer_main_parent a:hover,

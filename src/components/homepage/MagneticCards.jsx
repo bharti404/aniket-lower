@@ -9,12 +9,16 @@ import img4 from "../assests/Artists/Artist-Four.jpg";
 import img5 from "../assests/Artists/Artist-Five.jpg"; // Aboogie with a hoodie
 
 
+
+
+
+
 const items = [
-  { id: 1, img: img1 },
-  { id: 2, img: img2 },
-  { id: 3, img: img3 },
-  { id: 4, img: img4 },
-  { id: 5, img: img5 },
+  { id: 1, img: img1, Title: "⁠⁠PARTYNEXTDOOR" },
+  { id: 2, img: img2, Title: "⁠⁠DRAKE" },
+  { id: 3, img: img3, Title: "⁠⁠KEHLANI" },
+  { id: 4, img: img4, Title: "⁠⁠GUNNA" },
+  { id: 5, img: img5, Title: "A BOOGIE WIT THA HOODIE" },
 ];
 
 export default function MagneticCards() {

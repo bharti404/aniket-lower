@@ -111,11 +111,18 @@ font-size: 28px;
 margin-bottom: 20px;
 }
 
-.vdohome_contentone, .vdohome_contenttwo{
+.vdohome_contentone{
 font-size: 14px;
 margin-bottom: 15px;
 font-weight: 700;
 
+}
+
+.vdohome_contenttwo{
+
+    font-size: 18px;
+margin-bottom: 15px;
+font-weight: 700;
 }
 
 

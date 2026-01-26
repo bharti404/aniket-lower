@@ -1,8 +1,40 @@
+.strip-wrapper {
+    width: 100%;
+    background: #ffb7ce;
+    padding: 10px 0;
 
-
-.brand_creator_name-slider{
-
-    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+  }
+  
+  .scroll-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .scroll-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 700;
     color: white;
-    max-height: 80px;
-}
+  
+    /* Infinite scroll animation */
+    animation: marquee 25s linear infinite;
+  }
+  
+  .dot {
+    opacity: 0.7;
+    margin: 0 10px;
+  }
+  
+  /* Seamless infinite marquee */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
