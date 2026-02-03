@@ -1,7 +1,9 @@
 import React from "react";
 import "./Prefooter.css";
 import FatosmaImg from "../assests/prefooter/fatsoma.jpg";
-import FatsomaImg2 from "../assests/prefooter/bric.jpg";
+// import FatsomaImg2 from "../assests/prefooter/bric.jpg";
+
+import Yfg from "../assests/prefooter/Yfg.jpg";
 
 const Prefooter = () => {
   return (
@@ -10,7 +12,7 @@ const Prefooter = () => {
         {/* LEFT */}
         <div className="prefooter_main_left">
           <img src={FatosmaImg} alt="Partner 1" />
-          <img src={FatsomaImg2} alt="Partner 2" />
+          <img src={Yfg} alt="Partner 2" />
         </div>
 
         {/* RIGHT */}

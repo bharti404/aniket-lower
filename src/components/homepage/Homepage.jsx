@@ -16,11 +16,25 @@ import Lowercaseticketwidget from "../LowercaseTicket/Lowercaseticketwidget";
 import BrandCreator from "./BrandCreator";
 import { Typewriter } from "react-simple-typewriter";
 
+import ShinyText from "../motionelements/Shinytextcomp";
 
+// import TrueFocus from "../motionelements/Truefocus";
 
 const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+
+  const [showtextone, setShowtextone] = useState(false);
+
+  const [showtexttwo, setShowtexttwo] = useState(false);
+
+  setTimeout(() => {
+    setShowtextone(true);
+  }, 1500);
+
+  setTimeout(() => {
+    setShowtexttwo(true);
+  }, 3500);
 
   useEffect(() => {
     setTimeout(() => {
@@ -56,26 +70,83 @@ const Homepage = () => {
 
           <div className="vdo_home_content_text">
             <p className="vdohome_contentone">
-              Lowercase Events exists for the nights you remember and the ones
-              you don’t. <br /> We blend the right music, the right crowd, and the
-              right atmosphere to create experiences that feel authentic,
-              culturally relevant, and intentional.
+              <ShinyText
+                text="Music"
+                speed={2}
+                delay={0}
+                color="#b5b5b5"
+                shineColor="#ffffff"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+                disabled={false}
+              />
+
+              <ShinyText
+                text="Space"
+                speed={2}
+                delay={0}
+                color="#b5b5b5"
+                shineColor="#ffffff"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+                disabled={false}
+              />
+
+              <ShinyText
+                text="People"
+                speed={2}
+                delay={0}
+                color="#b5b5b5"
+                shineColor="#ffffff"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+                disabled={false}
+              />
             </p>
 
-            <div className="vdoheadhomepage">
-      <Typewriter
-                                words={[ 'Trusted by leading venues, artists, and partners.']}
-                                loop={50}
-                                cursor
-                                cursorStyle='_'
-                                typeSpeed={80}
-                                deleteSpeed={50}
-                                delaySpeed={1000}
-                     
-                    
-                              />
+            {showtextone && (
+              <p className="vdohome_contenttwo">
+                {/* <TrueFocus 
+sentence="True Focus"
+manualMode={false}
+blurAmount={5}
+borderColor="#fff700"
+animationDuration={0.5}
+pauseBetweenAnimations={1}
+/>
+               */}
 
-            </div>
+                <Typewriter
+                  words={["Together."]}
+                  loop={50}
+                  cursor
+                  cursorStyle=""
+                  typeSpeed={80}
+                  deleteSpeed={5000}
+                  delaySpeed={900000}
+                />
+              </p>
+            )}
+
+            {showtexttwo && (
+              <div className="vdoheadhomepage">
+                <Typewriter
+                  words={["Trusted by leading venues, artists, and partners."]}
+                  loop={50}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={80}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -96,6 +167,8 @@ const Homepage = () => {
       <Prefooter />
 
       <Footer />
+
+      {/* <Shinytextcomp /> */}
     </div>
   );
 };

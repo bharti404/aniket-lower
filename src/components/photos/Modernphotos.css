@@ -3,16 +3,37 @@
   align-items: center;
   justify-content: space-between;
   width: 90%;
-  margin: 10px auto;
+  margin: 40px auto 10px auto;
 }
 
-.moder_photos_heading {
+/* .moder_photos_heading {
   font-weight: 900;
-  font-size: 60px;
-  color: #fff;
+  font-size: 48px;
+  color: #000;
   font-family: Helvetica;
-}
+  margin: 20px 00;
 
+  padding: 10px 15px;
+  background: #fff;
+  border-radius: 5px;
+} */
+
+
+
+.moder_photos_heading{
+
+
+  padding: 10px;
+  background-color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+
+
+}
 .moder_photos_btn {
   padding: 10px 15px;
   background-color: yellow;

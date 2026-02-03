@@ -1,7 +1,8 @@
-/* .fatsoma_tkt_widget{
+.fatsoma_tkt_widget{
 
+    background-color: #fff;
 
-} */
+}
 
 .tkt_events_wdgts_top{
     width: 95vw;
@@ -9,18 +10,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 00 10px;
 }
 
 
 .tkt_event_wdgt_btn{
 
-    /* color: #fff; */
-    padding: 10px;
-    font-size: 48px;
-    font-weight: 800;
+    padding: 10px 15px;
     background-color: yellow;
-    display: inline;
+    font-size: 38px;
+    font-weight: 700;
     border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
 
 }
 
@@ -38,7 +41,7 @@
     margin: 20px 0;
 }
 .tkt_events_wdgts_top_right  span{
-    color: yellow !important;
+    color: #000 !important;
     font-size: 24px ;
     text-align: center;
   }
@@ -46,7 +49,8 @@
 
   .tkt_events_wdgts_top_left{
 
-    margin: 20px 0;
+    /* margin: 20px 0; */
+    padding: 40px 00 20px 00;
   }
 
 
