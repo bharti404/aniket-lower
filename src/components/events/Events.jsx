@@ -1,118 +1,69 @@
-import React from 'react'
-import './Events.css'
-import travis from '../assests/Travis.jpg';
-import rocky from '../assests/rocky.jpg';
-import paris from '../assests/eiffel_tour.jpg';
-import london from '../assests/london.jpg';
-import newyork from '../assests/new_york.jpg';
-import italy from '../assests/italy.jpeg';
-import vegas from '../assests/vegas.jpg';
-import chicago from '../assests/chicago.jpg';
-import Footer from '../footer/Footer';
-import Navbar from '../navbar/Navbar';
+import React, { useEffect, useRef } from 'react';
+import "./Events.css";
+
+import Footer from "../footer/Footer";
+import Navbar from "../navbar/Navbar";
 import Prefooter from "../footer/Prefooter";
 
-
-
-
-
-
-
 const Events = () => {
-    return (
-        <div>
-            <div className="event-container">
-                <Navbar />
 
-                <div className="event-heading">
-                    EVENTS
-                </div>
-                <div className="belownavbar">
-        <video
-          className="background-video"
-          src={
-            "https://res.cloudinary.com/doph28x3i/video/upload/v1729323634/Lowercase%20Events/jwm2qahfxoikoudl7kkc.mp4"
+      const widgetContainerRef = useRef(null);
+    
+      useEffect(() => {
+        // Copy the ref's current value to a local variable
+        const container = widgetContainerRef.current;
+      
+        if (container) {
+          const script = document.createElement('script');
+          script.src = 'https://widgets.fatsoma.com/widgets/scripts/events.js';
+          script.async = true;
+          script.dataset.reference = 'b604fd9d-8c9d-456c-8e09-ebccb95cb010';
+      
+          container.appendChild(script);
+          
+        }
+      
+        // Cleanup function
+        return () => {
+          if (container) {
+            container.innerHTML = ''; // Clear content
           }
-          autoPlay
-          loop
-          muted
-        ></video>
-      </div>
-                <div className="artist-event">
-                    <div className="events-card"><img src={travis} alt="travis" /></div>
-                    <div className="events-card"><img src={rocky} alt="rocky" /></div>
-                    <div className="events-card"><img src={paris} alt="travis" /></div>
-                    <div className="events-card"><img src={london} alt="rocky" /></div>
-                    <div className="events-card"><img src={newyork} alt="travis" /></div>
-                    <div className="events-card"><img src={italy} alt="rocky" /></div>
-                    <div className="events-card"><img src={vegas} alt="travis" /></div>
-                    <div className="events-card"><img src={chicago} alt="rocky" /></div>
-                    <div className="events-card"><img src={travis} alt="travis" /></div>
-                    <div className="events-card"><img src={rocky} alt="rocky" /></div>
-                    <div className="events-card"><img src={paris} alt="travis" /></div>
-                    <div className="events-card"><img src={london} alt="rocky" /></div>
-                    <div className="events-card"><img src={newyork} alt="travis" /></div>
-                    <div className="events-card"><img src={italy} alt="rocky" /></div>
-                    <div className="events-card"><img src={vegas} alt="travis" /></div>
-                    <div className="events-card"><img src={chicago} alt="rocky" /></div>
-                    <div className="events-card"><img src={travis} alt="travis" /></div>
-                    <div className="events-card"><img src={rocky} alt="rocky" /></div>
-                    <div className="events-card"><img src={paris} alt="travis" /></div>
-                    <div className="events-card"><img src={london} alt="rocky" /></div>
-                    <div className="events-card"><img src={newyork} alt="travis" /></div>
-                    <div className="events-card"><img src={italy} alt="rocky" /></div>
-                    <div className="events-card"><img src={vegas} alt="travis" /></div>
-                    <div className="events-card"><img src={chicago} alt="rocky" /></div>
-                </div>
-                <div className="events-year">
-                    <div className="year-heading">
-                        2024
-                    </div>
-                    <div className="year-events">
-                        <div className="events-card"><img src={paris} alt="travis" /></div>
-                        <div className="events-card"><img src={london} alt="rocky" /></div>
+        };
+      }, []);
+      
 
-                    </div>
-                </div>
-                <div className="events-year">
-                    <div className="year-heading">
-                        2023
-                    </div>
-                    <div className="year-events">
-                        <div className="events-card"><img src={italy} alt="rocky" /></div>
-                        <div className="events-card"><img src={vegas} alt="travis" /></div>
-                        <div className="events-card"><img src={chicago} alt="rocky" /></div>
-                        <div className="events-card"><img src={newyork} alt="travis" /></div>
-                    </div>
-                </div>
-                <div className="events-year">
-                    <div className="year-heading">
-                        2022
-                    </div>
-                    <div className="year-events">
-                        <div className="events-card"><img src={paris} alt="travis" /></div>
-                        <div className="events-card"><img src={london} alt="rocky" /></div>
 
-                    </div>
-                </div>
-                <div className="events-year">
-                    <div className="year-heading">
-                        2021
-                    </div>
-                    <div className="year-events">
-                        <div className="events-card"><img src={paris} alt="travis" /></div>
-                        <div className="events-card"><img src={london} alt="rocky" /></div>
-                        <div className="events-card"><img src={newyork} alt="travis" /></div>
-                        <div className="events-card"><img src={newyork} alt="travis" /></div>
-                    </div>
-                </div>
-            <Prefooter/>
-            <Footer />
-            </div>
+  return (
+    <div>
+      <div className="event-container">
+        <Navbar />
 
+        <div className="event-heading">EVENTS</div>
+        <div className="belownavbar">
+          <video
+            className="background-video"
+            src={
+              "https://res.cloudinary.com/doph28x3i/video/upload/v1729323634/Lowercase%20Events/jwm2qahfxoikoudl7kkc.mp4"
+            }
+            autoPlay
+            loop
+            muted
+          ></video>
         </div>
 
-    )
-}
 
-export default Events
+<div className="events_page_widget_container">
+
+
+        <div className='fatsoma_tkt_wgt_main' ref={widgetContainerRef}></div>
+</div>
+        {/* <iframe src="https://widgets.fatsoma.com/widgets/scripts/events.js'" frameborder="0" title="events-widget"></iframe> */}
+ 
+        <Prefooter />
+        <Footer />
+      </div>
+    </div>
+  );
+};
+
+export default Events;
