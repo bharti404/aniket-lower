@@ -3,7 +3,9 @@ import "./Prefooter.css";
 import axios from "axios";
 
 import FatosmaImg from "../assests/prefooter/fatsoma.jpg";
-import Yfg from "../assests/prefooter/yfg.jpg";
+// import Yfg from "../assests/prefooter/yfg.jpg";
+
+import Taski from "../assests/prefooter/yfg.jpg"
 
 const cities = [
   "London",
@@ -113,7 +115,7 @@ const Prefooter = () => {
         {/* LEFT */}
         <div className="prefooter_main_left">
           <img src={FatosmaImg} alt="Partner 1" />
-          <img src={Yfg} alt="Partner 2" />
+          <img src={Taski} alt="Partner 2" />
         </div>
 
         {/* RIGHT */}
