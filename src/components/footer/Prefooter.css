@@ -120,6 +120,73 @@
 
 
 
+
+
+
+
+
+
+
+
+
+/* ===== Modern Black Dropdown ===== */
+
+.prefooter_city {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 16px;
+
+  background-color: #000;
+  color: #fff;
+
+  border: 2px solid #fff;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  /* Remove default arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Custom arrow */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 18px;
+}
+
+/* Hover */
+.prefooter_city:hover {
+  border-color: #ddd;
+}
+
+/* Focus */
+.prefooter_city:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+}
+
+/* Placeholder Option */
+.prefooter_city option:first-child {
+  color: #888;
+}
+
+/* Dropdown Options */
+.prefooter_city option {
+  background: #000;
+  color: #fff;
+}
+
+
+
 /* FOR CHECK BOX END */
 
 /* RESPONSIVE */
