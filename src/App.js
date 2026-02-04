@@ -29,6 +29,7 @@ import Advertise from "./components/forms/Advertise";
 import UGC from "./components/forms/UGC";
 import Faq from "./components/Pages/Faq/FAQ";
 import Careers from "./components/forms/Career";
+import ArtistPage from "./components/Pages/Artists/ArtistPage";
 
 function App() {
   return (
@@ -73,7 +74,10 @@ function App() {
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
 
-        <Route path="/faq" element={<Faq />} />
+        <Route path="/support" element={<Faq />} />
+
+
+        <Route path="/new-artist-demo/:id" element={<ArtistPage />} />
 
 
         {/* <Route path="/admin" element={<AlbumUpload />} /> */}

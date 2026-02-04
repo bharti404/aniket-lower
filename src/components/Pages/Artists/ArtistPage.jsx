@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import artistsData from "../data/artistsData";
+import artistsData from "./artistData";
 import "./ArtistPage.css";
 
 const ArtistPage = () => {

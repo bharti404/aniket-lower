@@ -1,6 +1,5 @@
 import React from "react";
 import "./NewArtist.css";
-
 import Navbartoplogo from "../navbar/Navbartoplogo";
 import Footer from "../footer/Footer";
 import Prefooter from "../footer/Prefooter";
@@ -27,5 +26,4 @@ const NewArtist = () => {
     </>
   );
 };
-
 export default NewArtist;
