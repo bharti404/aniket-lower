@@ -4,7 +4,7 @@ import axios from "axios";
 
 import FatosmaImg from "../assests/prefooter/fatsoma.jpg";
 
-import Taski from "../assests/prefooter/yfg.jpg";
+import Taski from "../assests/prefooter/footerp.jpg";
 
 const cities = [
   "London",
