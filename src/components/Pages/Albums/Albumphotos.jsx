@@ -67,38 +67,85 @@ const HandleCopyLink = (photoUrl) => {
 
 
 
-const handleDownload = async (url, name, photoId) => {
+// const handleDownload = async (url, name, photoId) => {
+//     try {
+
+//         console.log("Initiating download for URL:", url);
+
+//       const response = await fetch(url);
+
+//       console.log("Fetch response:", response);
+  
+//       const blob = await response.blob();
+  
+//       const blobUrl = window.URL.createObjectURL(blob);
+  
+//       const a = document.createElement("a");
+//       a.href = blobUrl;
+//       a.download = name || "photo.png";
+  
+//       document.body.appendChild(a);
+//       a.click();
+  
+//       document.body.removeChild(a);
+  
+//       window.URL.revokeObjectURL(blobUrl);
+  
+//       // Increase count after success
+//       IncreaseDownload(photoId);
+  
+//     } catch (err) {
+//       console.error("Download failed:", err);
+//       alert("Download failed!");
+//     }
+//   };
+
+
+
+
+
+  // OPEN IMAGE IN NEW TAB
+// const handleDownload = (url, name, photoId) => {
+//     try {
+//       const a = document.createElement("a");
+//       a.href = url;
+//       a.download = name || "photo.jpg";
+//       a.target = "_blank";
+  
+//       document.body.appendChild(a);
+//       a.click();
+//       document.body.removeChild(a);
+  
+//       IncreaseDownload(photoId);
+  
+//     } catch (err) {
+//       console.error(err);
+//       alert("Download failed!");
+//     }
+//   };
+
+
+
+const handleDownload = (url, name, photoId) => {
     try {
-      const response = await fetch(url);
+      const link = document.createElement("a");
   
-      const blob = await response.blob();
+      link.href = url + "?response-content-disposition=attachment";
   
-      const blobUrl = window.URL.createObjectURL(blob);
+      link.download = name || "photo.jpg";
   
-      const a = document.createElement("a");
-      a.href = blobUrl;
-      a.download = name || "photo.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
   
-      document.body.appendChild(a);
-      a.click();
-  
-      document.body.removeChild(a);
-  
-      window.URL.revokeObjectURL(blobUrl);
-  
-      // Increase count after success
       IncreaseDownload(photoId);
   
     } catch (err) {
-      console.error("Download failed:", err);
+      console.error(err);
       alert("Download failed!");
     }
   };
-
-
-
-
-
+  
   
   
 
