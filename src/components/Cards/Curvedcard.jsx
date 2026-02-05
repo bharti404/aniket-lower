@@ -24,7 +24,11 @@ import "./Curvedcard.css";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const Curvedcard = ({ Albums, refetch }) => {
+const Curvedcard = ({ albums, refetch }) => {
+
+
+
+  console.log("Albums in Curvedcard:", albums);
   // const [admin, setAdmin] = useState(false);
   const navigate = useNavigate();
   // const { albums, setAlbums } = props;
@@ -45,17 +49,13 @@ const Curvedcard = ({ Albums, refetch }) => {
   const [folderName, setFolderName] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // const [dropboxImages, setDropboxImages] = useState([]);
+
 
   const token = cookies.get("token");
   const role = cookies.get("role");
   const baseUrl = process.env.REACT_APP_BASE_URL;
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("token")) setAdmin(true);
-  // }, []);
 
-  // prefill form when an album is selected
   useEffect(() => {
     if (selectedAlbum) {
       setTitle(selectedAlbum.title || "");
@@ -64,7 +64,7 @@ const Curvedcard = ({ Albums, refetch }) => {
       setVenue(selectedAlbum.venue || "");
       setDate(selectedAlbum.date || "");
       setTags(selectedAlbum.tags || "");
-      // setDropboxImages(selectedAlbum.photos || []);
+
       setCoverPhoto(selectedAlbum.coverPhoto || null);
       setFolderName(selectedAlbum.folderName || null);
     }
@@ -183,7 +183,7 @@ const Curvedcard = ({ Albums, refetch }) => {
 
   return (
     <div className="card_album_section">
-      {Albums?.map((album) => (
+      {albums?.map((album) => (
         <Card
           key={album._id}
           className="curvedcard_custom"
@@ -261,31 +261,6 @@ const Curvedcard = ({ Albums, refetch }) => {
                 </Box>) : ""
                 }
 
-                {/* <Box sx={{ display: "flex", gap: 1, ml: 1 }}>
-                  <TbEdit
-                    style={{
-                      fontSize: "22px",
-                      color: "#2075ca",
-                      cursor: "pointer",
-                    }}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleEdit(album);
-                    }}
-                  />
-
-                  <TbTrash
-                    style={{
-                      fontSize: "22px",
-                      color: "#d32f2f",
-                      cursor: "pointer",
-                    }}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleDelete(album);
-                    }}
-                  />
-                </Box> */}
               </Box>
 
               <Box
@@ -323,16 +298,6 @@ const Curvedcard = ({ Albums, refetch }) => {
               </Box>
             </CardContent>
           </CardActionArea>
-          {/* {admin && (
-            <CardActions sx={{ p: 1, pt: 0 }}>
-              <Button size="small" onClick={() => handleEdit(album)}>
-                Edit
-              </Button>
-              <Button size="small" color="error">
-                Delete
-              </Button>
-            </CardActions>
-          )} */}
         </Card>
       ))}
 
@@ -406,49 +371,11 @@ const Curvedcard = ({ Albums, refetch }) => {
               onChange={(e) => setFolderName(e.target.value)}
               sx={{ mb: 2 }}
             />
-
-            {/* <input
-
-              type="file"
-              accept="image/*"
-              onChange={(e) => setCoverPhoto(e.target.files[0])}
-            /> */}
-
-            {/* <input
-              type="file"
-              accept="image/*"
-              id="coverPhotoInput"
-              style={{ display: "none" }}
-              onChange={(e) => setCoverPhoto(e.target.files[0])}
-            /> */}
-
-            {/* <label htmlFor="coverPhotoInput" className="file-upload-btn">
-              Choose Cover Photo
-            </label> */}
           </form>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setOpen(false)}>Cancel</Button>
-          {/* <Button
-            type="submit"
-            form="edit-album-form"
-            sx={{
-              background: "linear-gradient(90deg, #3279c0, #184674)",
-              color: "#fff",
-              fontSize: "12px",
-              fontWeight: 600,
-              padding: "6px 12px",
-              borderRadius: "8px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
-              textTransform: "none", // remove uppercase
-              "&:hover": {
-                background: "linear-gradient(90deg, #184674, #3279c0)",
-                boxShadow: "0 6px 16px rgba(0,0,0,0.3)",
-              },
-            }}
-          >
-            Save Changes
-          </Button> */}
+
 
           <Button
             type="submit"

@@ -20,7 +20,9 @@ const Albumshow = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${baseUrl}/api/album/getall`);
+       
         const albumData = response.data.data || [];
+        // console.log("API albumData:", albumData);
         setData(albumData); 
         setLoading(false);
         
@@ -50,6 +52,7 @@ const Albumshow = () => {
   };
 
   const groupedData = groupAlbumsByYear(data);
+  console.log("Grouped Data:", groupedData);
   const sortedYears = Object.keys(groupedData).sort((a, b) => b - a);
 
   if (loading) return <p>Loading...</p>;
