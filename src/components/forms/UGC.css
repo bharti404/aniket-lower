@@ -1,57 +1,97 @@
 .ugcWrapper {
-    background: #000;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 40px 20px;
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* MAIN CONTAINER */
+.ugcContainer {
+  width: 50%;
+  max-width: 1000px;
+  display: flex;
+justify-content: center;
+align-items: flex-start;
+  gap: 80px;
+}
+
+/* LEFT SIDE */
+.ugcLeft {
+  color: #fff;
+}
+
+.ugcLeft h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ugcLeft .highlight {
+  color: #f5c518;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.ugcLeft p {
+  font-size: 15px;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+/* FORM */
+.bwForm {
+  width: 100%;
+  max-width: 420px;
+}
+
+.bwForm input,
+.bwForm textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 14px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  outline: none;
+}
+
+.bwForm input::placeholder,
+.bwForm textarea::placeholder {
+  color: #777;
+}
+
+/* BUTTON */
+.bwForm button {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  padding: 14px;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bwForm button:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ugcContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  
-  .bwForm {
-    max-width: 420px;
-    width: 100%;
-    color: #fff;
+
+  .ugcLeft h1 {
+    font-size: 36px;
   }
-  
-  .bwForm h2 {
-    margin-bottom: 8px;
-    font-size: 24px;
-  }
-  
-  .subtitle {
-    font-size: 14px;
-    color: #aaa;
-    margin-bottom: 20px;
-  }
-  
-  .bwForm input,
-  .bwForm textarea {
-    width: 100%;
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 12px;
-    margin-bottom: 14px;
-  }
-  
-  .bwForm input::placeholder,
-  .bwForm textarea::placeholder {
-    color: #888;
-  }
-  
-  .bwForm button {
-    width: 100%;
-    background: #fff;
-    color: #000;
-    padding: 12px;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-  }
-  
-  .bwForm button:hover {
-    background: #000;
-    color: #fff;
-    border: 1px solid #fff;
-  }
-  
+}

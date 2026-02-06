@@ -34,55 +34,65 @@ const Birthdays = () => {
 
   return (
     <>
+      <Navbartoplogo />
+
+      <div className="birthdayWrapper">
+        <div className="birthdayContainer">
+          {/* LEFT CONTENT */}
+          <div className="birthdayLeft">
+            <h1>Birthday Bookings <br /> Made Simple.</h1>
 
 
-    <Navbartoplogo />
+            <p>Tell us a few details and we’ll get back to you shortly.</p>
+          </div>
 
-    <div className="birthdayWrapper">
-      <form className="bwForm" onSubmit={submit}>
-        <h2>Celebrate Your Birthday With Us</h2>
-        <p className="subtitle">
-          Big night, VIP tables, special treats — tell us your plan 🎂
-        </p>
 
-        <input
-          type="text"
-          placeholder="Full Name"
-          value={data.fullName}
-          onChange={(e) => setData({ ...data, fullName: e.target.value })}
-          required
-        />
+          <div className="birthdayRight">
 
-        <input
-          type="tel"
-          placeholder="Mobile Number"
-          value={data.mobile}
-          onChange={(e) => setData({ ...data, mobile: e.target.value })}
-          required
-        />
+    
 
-        <input
-          type="email"
-          placeholder="Email Address"
-          value={data.email}
-          onChange={(e) => setData({ ...data, email: e.target.value })}
-          required
-        />
+          {/* RIGHT FORM */}
+          <form className="bwForm" onSubmit={submit}>
+            <input
+              type="text"
+              placeholder="Full Name"
+              value={data.fullName}
+              onChange={(e) => setData({ ...data, fullName: e.target.value })}
+              required
+            />
 
-        <textarea
-          placeholder="Tell us your birthday plan (date, guests, vibe...)"
-          rows="4"
-          value={data.message}
-          onChange={(e) => setData({ ...data, message: e.target.value })}
-          required
-        />
+            <input
+              type="tel"
+              placeholder="Mobile Number"
+              value={data.mobile}
+              onChange={(e) => setData({ ...data, mobile: e.target.value })}
+              required
+            />
 
-        <button type="submit">Enquire Now</button>
-      </form>
-    </div>
+            <input
+              type="email"
+              placeholder="Email Address"
+              value={data.email}
+              onChange={(e) => setData({ ...data, email: e.target.value })}
+              required
+            />
 
-<Prefooter />
-<Footer />
+            <textarea
+              placeholder="Tell us your birthday plan (date, guests, vibe...)"
+              rows="4"
+              value={data.message}
+              onChange={(e) => setData({ ...data, message: e.target.value })}
+              required
+            />
+
+            <button type="submit">Submit</button>
+          </form>
+          </div>
+        </div>
+      </div>
+
+      <Prefooter />
+      <Footer />
     </>
   );
 };

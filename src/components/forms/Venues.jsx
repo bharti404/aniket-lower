@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import "./Venues.css";
 import axios from "axios";
 
-
 import Prefooter from "../footer/Prefooter";
 import Footer from "../footer/Footer";
 import Navbartoplogo from "../navbar/Navbartoplogo";
 
 const Venues = () => {
-
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -64,7 +62,6 @@ const Venues = () => {
         data: "",
         formType: "venue-partner",
       });
-
     } catch (error) {
       console.error("Error:", error);
 
@@ -76,65 +73,65 @@ const Venues = () => {
 
   return (
     <>
-<Navbartoplogo />
+      <Navbartoplogo />
 
       <div className="venuesWrapper">
+        <div className="venuesContainer">
+          {/* Left Content */}
+          <div className="venuesLeft">
+            <h1>
+              Venue <br /> Partnerships.
+            </h1>
 
-        <form className="bwForm" onSubmit={submit}>
+            <p>
+              Tell us about your space. <br />
+              We'll take it from there.
+            </p>
+          </div>
 
-          <h2>Partner Your Venue With Us</h2>
+          {/* Right Form */}
+          <form className="bwForm" onSubmit={submit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-          <p className="subtitle">
-            Let’s collaborate on events, promotions, and unforgettable nights.
-          </p>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Mobile Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
 
-          {/* Name */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-          {/* Phone */}
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Mobile Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+            <textarea
+              name="data"
+              placeholder="Tell us about your venue (location, capacity, availability)"
+              rows="4"
+              value={formData.data}
+              onChange={handleChange}
+              required
+            />
 
-          {/* Email */}
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-
-          {/* Message */}
-          <textarea
-            name="data"
-            placeholder="Tell us about your venue (location, capacity, availability)"
-            rows="4"
-            value={formData.data}
-            onChange={handleChange}
-            required
-          />
-
-          {/* Button */}
-          <button type="submit" disabled={loading}>
-            {loading ? "Sending..." : "Get In Touch"}
-          </button>
-
-        </form>
-
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Submit"}
+            </button>
+          </form>
+        </div>
       </div>
 
       <Prefooter />

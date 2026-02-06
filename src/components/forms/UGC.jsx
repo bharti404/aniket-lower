@@ -76,59 +76,67 @@ const UGC = () => {
       <Navbartoplogo />
 
       <div className="ugcWrapper">
-        <form className="bwForm" onSubmit={submit}>
-          <h2>Creators & Influencers</h2>
+        <div className="ugcContainer">
+          {/* LEFT CONTENT */}
+          <div className="ugcLeft">
+            <h1>
+              Creator <br /> Partnerships.
+            </h1>
 
-          <p className="subtitle">
-            Collaborate with Lowercase Events — gigs, promos & content
-            partnerships.
-          </p>
+            <p className="highlight">
+              From content to bookings, we help creators build their presence
+              with Lowercase Events.
+            </p>
 
-          {/* Name */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+            <p>
+              Create with us. We will help with the planning, promotion, and
+              execution.
+            </p>
+          </div>
 
-          {/* Phone */}
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Mobile Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+          {/* RIGHT FORM */}
+          <form className="bwForm" onSubmit={submit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-          {/* Email */}
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Mobile Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
 
-          {/* Message */}
-          <textarea
-            name="data"
-            placeholder="Tell us about your content, platforms & audience"
-            rows="4"
-            value={formData.data}
-            onChange={handleChange}
-            required
-          />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-          {/* Button */}
-          <button type="submit" disabled={loading}>
-            {loading ? "Sending..." : "Collaborate With Us"}
-          </button>
-        </form>
+            <textarea
+              name="data"
+              placeholder="Tell us your birthday plan (date, guests, vibe...)"
+              rows="4"
+              value={formData.data}
+              onChange={handleChange}
+              required
+            />
+
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "Submit"}
+            </button>
+          </form>
+        </div>
       </div>
 
       <Prefooter />

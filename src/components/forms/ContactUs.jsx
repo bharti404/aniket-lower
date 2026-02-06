@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./ContactUs.css";
 import axios from "axios";
 
-
 import Prefooter from "../footer/Prefooter";
 import Footer from "../footer/Footer";
 import Navbartoplogo from "../navbar/Navbartoplogo";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -74,56 +74,68 @@ const ContactUs = () => {
 
   return (
     <>
+      <Navbartoplogo />
+      <div className="contactWrapper">
+        {/* Left Content */}
+        <div className="contactLeft">
+          <h1>
+            Need help
+            <br />
+            with an event?
+          </h1>
 
-<Navbartoplogo />
+          <p>
+            Fill out the form below and our <br />
+            team will respond soon.
+          </p>
 
-      <div className="contactUsPage">
-        <form className="bwForm" onSubmit={submit}>
-          <h2>Contact Us</h2>
+          <Link to="/faq">
+            <span className="faqLink">See FAQ's</span>
+          </Link>
+        </div>
 
-          {/* Name */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+        <div className="contactRight">
+          {/* Right Form */}
+          <form className="bwForm" onSubmit={submit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-          {/* Phone */}
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Mobile Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Mobile Number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
 
-          {/* Email */}
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-          {/* Message */}
-          <textarea
-            name="data"
-            placeholder="Your Message"
-            value={formData.data}
-            onChange={handleChange}
-          />
+            <textarea
+              name="data"
+              placeholder="Tell us your birthday plan (date, guests, vibe...)"
+              value={formData.data}
+              onChange={handleChange}
+            />
 
-          {/* Button */}
-          <button type="submit" disabled={loading}>
-            {loading ? "Sending..." : "Submit"}
-          </button>
-        </form>
+            <button type="submit" disabled={loading}>
+              {loading ? "Sending..." : "SUBMIT"}
+            </button>
+          </form>
+        </div>
       </div>
 
       <Prefooter />
