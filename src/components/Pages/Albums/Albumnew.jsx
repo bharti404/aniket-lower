@@ -7,7 +7,6 @@ import Navbartoplogo from "../../navbar/Navbartoplogo";
 import { useNavigate } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 
-
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const Albumnew = () => {
@@ -36,19 +35,18 @@ const Albumnew = () => {
   const fetchAlbums = async () => {
     try {
       const response = await axios.get(`${baseUrl}/api/album/getall`);
-  
+
       const filteredData = response.data.data.filter(
         (album) => album._id !== "6976425b7af04a2b9f8da4f1"
       );
-  
+
       console.log("Fetched Albums:", filteredData);
-  
+
       setAlbums(filteredData);
     } catch (error) {
       console.error("Error fetching albums:", error);
     }
   };
-  
 
   const SendToPhotobyAlbum = (album) => {
     navigate(`/photobyalbum/${album._id}`);
@@ -84,36 +82,26 @@ const Albumnew = () => {
       <div className="new_albums_head_plus_serch_box_cont">
         <p className="albumphotopage_heading">ALBUMS</p>
 
-        {/* Search Box */}
-        {/* <div className="album_search_wrapper">
-          <input
-            type="text"
-            placeholder="Search by album name or tags..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="album_search_input"
-          />
-        </div> */}
 
         <p className="album_page_new_top_txt">
           Easily <span>view, share</span> and <span>download</span> your photos
         </p>
 
+        <div className="album_search_wrapper">
+          <div className="album_search_box">
+            <span className="search_icon">
+              <IoIosSearch />
+            </span>
 
-<div className="album_search_wrapper">
-  <div className="album_search_box">
-    <span className="search_icon"><IoIosSearch /></span>
-
-    <input
-      type="text"
-      placeholder="Search by album name or tags..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      className="album_search_input"
-    />
-  </div>
-</div>
-
+            <input
+              type="text"
+              placeholder="Search by album name or tags..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="album_search_input"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Albums Grid */}
