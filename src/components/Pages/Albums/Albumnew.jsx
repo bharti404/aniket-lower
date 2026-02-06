@@ -96,7 +96,7 @@ const Albumnew = () => {
         </div> */}
 
         <p className="album_page_new_top_txt">
-          Easily <span>View, share</span> and <span>download</span> your photos
+          Easily <span>view, share</span> and <span>download</span> your photos
         </p>
 
 

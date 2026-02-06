@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./ContactUs.css";
+// import "./ContactUs.css";
+import "./GroupBookings.css";
 import axios from "axios";
 
 import Prefooter from "../footer/Prefooter";
@@ -73,55 +74,69 @@ const GroupBookings = () => {
 
   return (
     <>
-<Navbartoplogo />
+      <Navbartoplogo />
 
       <div className="groupbookings_page">
-        <form className="bwForm" onSubmit={submit}>
-          <h2>Group Bookings</h2>
+        <h2 className="group_heading">Group bookings and Special Requests</h2>
 
-          {/* Name */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+        <div className="groupbookings_content_cont">
+          <div className="groupbookings_content_cont_left">
+            <p className="groupbookings_content_cont_left_head">
+              Tell us what you need, and we'll get back to you shortly
+            </p>
 
-          {/* Phone */}
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Mobile Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+            <p className="groupbookings_content_cont_left_para">
+              *Group bookings are for parties of 10 or more.
+            </p>
+          </div>
 
-          {/* Email */}
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <div className="groupbookings_content_cont_right">
+            <form className="bwForm" onSubmit={submit}>
+              {/* Name */}
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
 
-          {/* Message */}
-          <textarea
-            name="data"
-            placeholder="Booking Details"
-            value={formData.data}
-            onChange={handleChange}
-          />
+              {/* Phone */}
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Mobile Number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
 
-          {/* Button */}
-          <button type="submit" disabled={loading}>
-            {loading ? "Sending..." : "Submit"}
-          </button>
-        </form>
+              {/* Email */}
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+
+              {/* Message */}
+              <textarea
+                name="data"
+                placeholder="Booking Details"
+                value={formData.data}
+                onChange={handleChange}
+              />
+
+              {/* Button */}
+              <button type="submit" disabled={loading}>
+                {loading ? "Sending..." : "Submit"}
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
 
       <Prefooter />

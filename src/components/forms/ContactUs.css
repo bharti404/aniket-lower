@@ -82,3 +82,15 @@
   font-size: 16px;
   color: #777; /* optional (same shade everywhere) */
 }
+
+
+
+
+
+.groupbookings_content_cont{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
