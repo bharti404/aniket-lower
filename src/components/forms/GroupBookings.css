@@ -1,146 +1,205 @@
 /* MAIN PAGE */
 
 .groupbookings_page {
-    /* min-height: 100vh; */
-    background: #000;
-    color: #fff;
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
+  /* min-height: 100vh; */
+  background: #000;
+  color: #fff;
 
-  }
-  
-  /* TOP HEADING */
-  
-  .group_heading {
-    font-size: 28px;
-    font-weight: 500;
-    margin: 50px auto 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 90px;  
+
+
+}
+
+/* TOP HEADING */
+
+.group_heading {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 50px auto 30px auto;
+  text-align: center;
+}
+
+/* CONTENT WRAPPER */
+
+.groupbookings_content_cont {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 30px;
+}
+
+/* LEFT SIDE */
+
+.groupbookings_content_cont_left {
+  width: 45%;
+}
+
+.groupbookings_content_cont_left_head {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #6fb9ff;
+
+  margin-bottom: 25px;
+  padding-right: 30px;
+}
+
+.groupbookings_content_cont_left_para {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* RIGHT SIDE (FORM) */
+
+.groupbookings_content_cont_right {
+  width: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* FORM BOX */
+
+.bwForm {
+  width: 100%;
+  max-width: 420px;
+
+  background: transparent;
+  padding: 0;
+}
+
+/* INPUTS */
+
+.bwForm input,
+.bwForm textarea {
+  width: 100%;
+
+  background: transparent;
+  border: 1px solid #777;
+
+  color: #fff;
+
+  padding: 14px 15px;
+  margin-bottom: 18px;
+
+  font-size: 15px;
+  outline: none;
+}
+
+.bwForm textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* PLACEHOLDER */
+
+.bwForm input::placeholder,
+.bwForm textarea::placeholder {
+  color: #888;
+  font-size: 14px;
+}
+
+/* BUTTON */
+
+.bwForm button {
+  width: 100%;
+
+  background: #fff;
+  color: #000;
+
+  border: none;
+  padding: 14px;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.bwForm button:hover {
+  background: #ddd;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px) {
+  .groupbookings_content_cont {
+    flex-direction: column;
+    gap: 50px;
     text-align: center;
   }
-  
-  /* CONTENT WRAPPER */
-  
-  .groupbookings_content_cont {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  
-    gap: 30px;
-  }
-  
-  /* LEFT SIDE */
-  
-  .groupbookings_content_cont_left {
-    width: 45%;
-  }
-  
-  .groupbookings_content_cont_left_head {
-    font-size: 42px;
-    font-weight: 600;
-    line-height: 1.3;
-    color: #6fb9ff;
-  
-    margin-bottom: 25px;
-    padding-right: 30px;
-  }
-  
-  .groupbookings_content_cont_left_para {
-    font-size: 14px;
-    color: #aaa;
-  }
-  
-  /* RIGHT SIDE (FORM) */
-  
+
   .groupbookings_content_cont_right {
-    width: 50%;
-  
-    display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
-  
-  /* FORM BOX */
-  
-  .bwForm {
-    width: 100%;
-    max-width: 420px;
-  
-    background: transparent;
-    padding: 0;
+
+  .groupbookings_content_cont_left_head {
+    font-size: 32px;
   }
-  
-  /* INPUTS */
-  
-  .bwForm input,
-  .bwForm textarea {
-    width: 100%;
-  
-    background: transparent;
-    border: 1px solid #777;
-  
-    color: #fff;
-  
-    padding: 14px 15px;
-    margin-bottom: 18px;
-  
-    font-size: 15px;
-    outline: none;
-  }
-  
-  .bwForm textarea {
-    min-height: 120px;
-    resize: none;
-  }
-  
-  /* PLACEHOLDER */
-  
-  .bwForm input::placeholder,
-  .bwForm textarea::placeholder {
-    color: #888;
-    font-size: 14px;
-  }
-  
-  /* BUTTON */
-  
-  .bwForm button {
-    width: 100%;
-  
-    background: #fff;
-    color: #000;
-  
-    border: none;
-    padding: 14px;
-  
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-  
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .bwForm button:hover {
-    background: #ddd;
-  }
-  
-  /* MOBILE RESPONSIVE */
-  
-  @media (max-width: 900px) {
-    .groupbookings_content_cont {
-      flex-direction: column;
-      gap: 50px;
-      text-align: center;
-    }
-  
-    .groupbookings_content_cont_right {
-      justify-content: center;
-    }
-  
-    .groupbookings_content_cont_left_head {
-      font-size: 32px;
-    }
-  }
-  
+}
+
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+.groupbookings_content_cont {
+  width: 80%;
+}
+
+.groupbookings_content_cont_left_head {
+  font-size: 36px;
+  padding-right: 0;
+}
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+.groupbookings_content_cont {
+  width: 100%;
+  padding: 0 16px;
+  gap: 30px;
+}
+
+.groupbookings_content_cont_left,
+.groupbookings_content_cont_right {
+  width: 100%;
+}
+
+.groupbookings_content_cont_left_head {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.groupbookings_content_cont_left_para {
+  font-size: 13px;
+}
+
+.bwForm {
+  max-width: 100%;
+}
+
+.bwForm input,
+.bwForm textarea {
+  font-size: 16px; /* better mobile typing */
+}
+
+.bwForm button {
+  font-size: 14px;
+  padding: 12px;
+}
+}
+
+/* ---------- Small Phones ---------- */
+@media (max-width: 480px) {
+.groupbookings_content_cont_left_head {
+  font-size: 24px;
+}
+}
+

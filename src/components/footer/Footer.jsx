@@ -45,7 +45,7 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link to="/artist">Artist</Link>
+                <Link to="/artists">Artist</Link>
               </li>
 
               {/* <li>

@@ -110,3 +110,77 @@ align-items: flex-start;
   }
 
 }
+
+/* Push content below navbar */
+
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .venuesWrapper {
+    margin: 16vh auto 8vh auto;
+    padding: 140px 20px 40px;
+  }
+
+  .venuesContainer {
+    width: 80%;
+    gap: 50px;
+  }
+
+  .venuesLeft h1 {
+    font-size: 40px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .venuesWrapper {
+    margin: 120px auto 60px auto;   /* avoid vh jump on mobile */
+    /* padding: 120px 16px 30px;       */
+  }
+
+  .venuesContainer {
+    width: 100%;
+    flex-direction: column;       /* 👈 stack */
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .venuesLeft,
+  .bwForm {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .venuesLeft h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .venuesLeft p {
+    font-size: 14px;
+  }
+
+  .bwForm input,
+  .bwForm textarea {
+    font-size: 16px; /* better typing on mobile */
+    padding: 12px;
+  }
+
+  .bwForm button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* ---------- Small Phones ---------- */
+@media (max-width: 480px) {
+  .venuesWrapper {
+    margin: 100px auto 40px auto;
+    
+  }
+
+  .venuesLeft h1 {
+    font-size: 26px;
+  }
+}

@@ -1,31 +1,63 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './Navbar.css'
-// import LowercaseeventsLogo from '../assests/LowercaseLogo.png'
+// import React from 'react'
+// import { Link } from 'react-router-dom'
+// import './Navbar.css'
 
-const Navbar = () => {
-  return (
-    <div className="navbar">
-                {/* <div className="navbar-logo">
-                <Link to='/'> 
-                    <img src={LowercaseeventsLogo} alt="" />
-                  </Link>
-                </div> */}
-                <div className="navbar-bar">
-                    {/* <Link  to='/about' className='navbar-items' >ABOUT</Link> */}
-                    <Link  to='/' className='navbar-items'>HOME</Link>
 
-                    <Link  to='/events' className='navbar-items'>EVENTS</Link>
-                    <Link  to='/albums' className='navbar-items'>ALBUMS</Link>
-                    {/* <Link  to='/artist' className='navbar-items'>ARTISTS</Link> */}
-                      <Link  to='/artists' className='navbar-items'>ARTISTS</Link>
-                    {/* <Link  to='/collab' className='navbar-items'>BRANDS</Link> */}
-                    {/* <Link  to='/' className='navbar-items'>CONTACT US</Link> */}
+// const Navbar = () => {
+//   return (
+//     <div className="navbar">
+                
+//                 <div className="navbar-bar">
+                    
+//                     <Link  to='/' className='navbar-items'>HOME</Link>
+
+//                     <Link  to='/events' className='navbar-items'>EVENTS</Link>
+//                     <Link  to='/albums' className='navbar-items'>ALBUMS</Link>
+                    
+//                       <Link  to='/artists' className='navbar-items'>ARTISTS</Link>
+                    
 
 
                  
-                </div>
-            </div>
+//                 </div>
+//             </div>
+//   )
+// }
+
+// export default Navbar
+
+
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import './Navbar.css'
+
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  return (
+    <div className="navbar">
+      <div className="navbar-bar">
+
+        {/* Menu Button */}
+        <div 
+          className={`menu-btn ${menuOpen ? 'open' : ''}`} 
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Nav Links */}
+        <div className={`navbar-links ${menuOpen ? 'active' : ''}`}>
+          <Link to='/' className='navbar-items' onClick={() => setMenuOpen(false)}>HOME</Link>
+          <Link to='/events' className='navbar-items' onClick={() => setMenuOpen(false)}>EVENTS</Link>
+          <Link to='/albums' className='navbar-items' onClick={() => setMenuOpen(false)}>ALBUMS</Link>
+          <Link to='/artists' className='navbar-items' onClick={() => setMenuOpen(false)}>ARTISTS</Link>
+        </div>
+
+      </div>
+    </div>
   )
 }
 

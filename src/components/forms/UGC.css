@@ -85,7 +85,7 @@ align-items: flex-start;
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .ugcContainer {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -93,5 +93,64 @@ align-items: flex-start;
 
   .ugcLeft h1 {
     font-size: 36px;
+  }
+} */
+
+/* bharti */
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ugcWrapper {
+    padding: 40px 16px;
+    padding-top: 100px;
+  }
+
+  .ugcContainer {
+    width: 100%;
+    flex-direction: column;   /* STACK vertically */
+    gap: 40px;
+  }
+
+  .ugcLeft {
+    text-align: center;
+  }
+
+  .ugcLeft h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .ugcLeft .highlight {
+    font-size: 14px;
+  }
+
+  .ugcLeft p {
+    font-size: 14px;
+  }
+
+  .bwForm {
+    max-width: 100%;
+  }
+
+  .bwForm input,
+  .bwForm textarea {
+    font-size: 16px; /* prevents iOS zoom */
+    padding: 14px;
+  }
+
+  .bwForm button {
+    font-size: 14px;
+    padding: 14px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .ugcLeft h1 {
+    font-size: 26px;
+  }
+
+  .ugcLeft .highlight {
+    font-size: 13px;
   }
 }

@@ -1,4 +1,4 @@
-
+/* 
 .navbar {
     position: absolute;
     top: 40px;
@@ -46,7 +46,7 @@
 }
 
 .navbar-items:hover {
-    color: #ffcc00; /* Optional hover effect */
+    color: #ffcc00; 
 }
 
 
@@ -57,4 +57,127 @@
         width: 90%;
     }
 
+} */
+
+
+/* bharti */
+
+.navbar {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.navbar-bar {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Links Desktop */
+.navbar-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Nav Item */
+.navbar-items {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Menu Button (Hamburger / X) */
+.menu-btn {
+    position: relative;
+    width: 30px;
+    height: 24px;
+    display: none;
+    cursor: pointer;
+    z-index: 200;
+
+}
+
+.menu-btn span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+/* Hamburger lines */
+.menu-btn span:nth-child(1) {
+    top: 0;
+}
+
+.menu-btn span:nth-child(2) {
+    top: 10px;
+}
+
+.menu-btn span:nth-child(3) {
+    top: 20px;
+}
+
+/* Animate to X */
+.menu-btn.open span:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    .navbar-bar {
+        width: 90%;
+    }
+
+    .menu-btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .navbar-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.97);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transform: translateY(-100%);
+        transition: transform 0.35s ease-in-out;
+        z-index: 100;
+    }
+
+    .navbar-links.active {
+        transform: translateY(0);
+    }
+
+    .navbar-items {
+        font-size: 22px;
+    }
 }

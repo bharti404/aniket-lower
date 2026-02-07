@@ -1,5 +1,5 @@
 
-.navbar_with_top_logo {
+/* .navbar_with_top_logo {
     position: absolute;
     top: 50px;
     left: 0;
@@ -29,7 +29,7 @@
     display: flex;
     
     justify-content: space-around;
-    /* border: 2px solid red; */
+    
 
     margin: 10px 00 00 00;
     
@@ -47,10 +47,147 @@
 }
 
 .navbar-items:hover {
-    color: #ffcc00; /* Optional hover effect */
+    color: #ffcc00; 
 }
 
 
 .navbar-spacer{
-    height: 50px; /* Adjust this value to match the height of your navbar */
+    height: 50px; 
+} */
+
+
+.navbar_with_top_logo {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+    background-color: rgba(0, 0, 0, 0); 
+    flex-direction: column;
+}
+
+.navbar-top-row {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar-logo {
+    cursor: pointer;
+}
+
+.navbar-logo img{
+    width: 10vw;
+    min-width: 120px;
+}
+
+.navbar-bar_wtl {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.navbar-items {
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 900;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar-items:hover {
+    color: #ffcc00; 
+}
+
+.navbar-spacer{
+    height: 50px; 
+}
+
+/* ---------- Mobile Menu Button ---------- */
+.menu-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menu-btn span {
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.menu-btn span:nth-child(1) { top: 14px; }
+.menu-btn span:nth-child(2) { top: 20px; }
+.menu-btn span:nth-child(3) { top: 26px; }
+
+.menu-btn.open span:nth-child(1) {
+    top: 20px;
+    transform: rotate(45deg);
+}
+
+.menu-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
+}
+
+/* ---------- Mobile Styles ---------- */
+@media (max-width: 768px) {
+
+    .navbar-logo img {
+        width: 160px;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .navbar-bar_wtl {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.97);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transform: translateY(-100%);
+        transition: transform 0.35s ease-in-out;
+        z-index: 15;
+    }
+
+    .navbar-bar_wtl.active {
+        transform: translateY(0);
+    }
+
+    .navbar-items {
+        font-size: 22px;
+    }
 }

@@ -76,7 +76,7 @@ const Albumnew = () => {
   });
 
   return (
-    <>
+    <div className="me">
       <Navbartoplogo />
 
       <div className="new_albums_head_plus_serch_box_cont">
@@ -142,7 +142,7 @@ const Albumnew = () => {
 
       <Prefooter />
       <Footer />
-    </>
+    </div>
   );
 };
 

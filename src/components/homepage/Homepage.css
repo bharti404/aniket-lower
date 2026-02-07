@@ -1,11 +1,13 @@
 body {
   background: #000;
+  overflow-x: hidden;
 }
 .homepage-container {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .belownavbar {

@@ -9,7 +9,7 @@
 
 }
 
-/* Main container */
+
 .birthdayContainer {
   width: 50%;
   max-width: 1100px;
@@ -19,7 +19,7 @@ align-items: flex-start;
 
 }
 
-/* LEFT SIDE */
+
 .birthdayLeft {
   color: #fff;
   width: 45%;
@@ -42,13 +42,13 @@ align-items: flex-start;
   width: 50%;
 }
 
-/* FORM */
+
 .bwForm {
   max-width: 400px;
 
 }
 
-/* Inputs */
+
 .bwForm input,
 .bwForm textarea {
   width: 100%;
@@ -66,7 +66,7 @@ align-items: flex-start;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Button */
+
 .bwForm button {
   width: 100%;
   background: #fff;
@@ -85,7 +85,7 @@ align-items: flex-start;
   border: 1px solid #fff;
 }
 
-/* MOBILE RESPONSIVE */
+
 @media (max-width: 900px) {
   .birthdayContainer {
     grid-template-columns: 1fr;
@@ -95,5 +95,87 @@ align-items: flex-start;
 
   .bwForm {
     margin: 0 auto;
+  }
+}
+
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .birthdayWrapper {
+    margin: 16vh auto 8vh auto;
+    padding: 30px 20px;
+  }
+
+  .birthdayContainer {
+    width: 80%;
+  }
+
+  .birthdayLeft h1 {
+    font-size: 34px;
+  }
+
+  .birthdayLeft p {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .birthdayWrapper {
+    margin: 120px auto 60px auto; /* avoid huge vh on mobile */
+    padding: 20px 16px;
+  }
+
+  .birthdayContainer {
+    width: 100%;
+    flex-direction: column;   /* 👈 stack left + right */
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .birthdayLeft,
+  .birthdayRight {
+    width: 100%;
+  }
+
+  .birthdayLeft h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .birthdayLeft p {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .bwForm {
+    max-width: 100%;
+  }
+
+  .bwForm input,
+  .bwForm textarea {
+    font-size: 16px; /* better for mobile keyboards */
+    padding: 12px;
+  }
+
+  .bwForm button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* ---------- Small Phones ---------- */
+@media (max-width: 480px) {
+  .birthdayWrapper {
+    margin: 100px auto 50px auto;
+  }
+
+  .birthdayLeft h1 {
+    font-size: 24px;
+  }
+
+  .birthdayLeft p {
+    font-size: 15px;
   }
 }
