@@ -2,11 +2,10 @@
 .home_artists_section {
   position: relative;
   width: 100%;
-  margin:10px 0px 50px 0px ;
-  padding: 40px 20px ;
+  margin: 10px 0px 50px 0px;
+  padding: 40px 20px;
   background-color: transparent;
   font-family: Helvetica, sans-serif;
-
 }
 
 /* 🎵 Marquee Background */
@@ -15,7 +14,7 @@
   top: 100px;
   bottom: 100px;
   width: 90%;
-  height: 100%;  
+  height: 100%;
   z-index: 0; /* behind content */
   pointer-events: none; /* so clicks go through */
   display: flex;
@@ -48,9 +47,7 @@
   padding-right: 100px; /* spacing between repeats */
 }
 
-
-.home_artists_section_heading{
-
+.home_artists_section_heading {
   padding: 10px 15px;
   background-color: yellow;
   font-size: 38px;
@@ -60,9 +57,7 @@
   text-decoration: none;
   color: #000;
   width: fit-content;
-
 }
-
 
 /* 🔁 Marquee Animations */
 @keyframes marquee {
@@ -88,7 +83,6 @@
   position: relative;
   z-index: 1; /* on top */
   background-color: transparent;
-
 }
 
 /* Responsive adjustments */
@@ -104,93 +98,90 @@
 
   .home_artists_section_heading {
     font-size: 80px;
-    
   }
 }
-.home_artist_name_items{
+.home_artist_name_items {
   font-size: 54px;
   bottom: 20px;
   border-radius: 5px;
   margin: 20px auto;
   padding: 00 10px;
   width: 95vw;
-
 }
 
-.bottom_row{
+.bottom_row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 44px;
   padding: 50px 20px 0px 20px;
   margin-bottom: 50px;
-
- 
-
 }
-.left_text{
+.left_text {
   font-size: 36px;
-  color: black;
-  background-color: yellow;
-  padding: 5px 10px 5px 10px ;
- 
+  color: yellow;
+  background-color: black;
+  padding: 5px 10px 5px 10px;
 }
-.full_lineup_button{
-   font-size: 36px;
-  color: black;
-
-    padding: 5px 10px 5px 10px ;
-    width: fit-content;
-
+.full_lineup_button {
+  padding: 10px 15px;
+  background-color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
 }
 
-
-.vwall-artists-btn{
-
+.vwall-artists-btn {
   text-align: right;
 }
 
-
 @media screen and (max-width: 768px) {
-
-
-  .home_artists_section{
-
+  .home_artists_section {
     padding: 20px 10px 10px 10px;
-    margin:10px 0px 0px 0px ;
+    margin: 10px 0px 0px 0px;
   }
-  .home_artist_name_items{
+  .home_artist_name_items {
     font-size: 32px;
 
     margin: 15px auto;
     text-align: center;
   }
-  .bottom_row{
-    flex-direction: column-reverse;
+
+  .bottom_row {
+    flex-direction: column;
 
     gap: 20px;
     font-size: 24px;
     margin-bottom: 30px;
     text-align: center;
+    padding: 30px 20px 0px 20px;
   }
-  .left_text{
+  .left_text {
     font-size: 24px;
-    padding: 3px 6px 3px 6px ;
+    padding: 3px 6px 3px 6px;
   }
-  .full_lineup_button{
-    font-size: 24px;
-    padding: 3px 6px 3px 6px ;
+  .full_lineup_button {
+    font-size: 36px;
+    padding: 3px 6px 3px 6px;
+    padding: 10px;
   }
 
-
-  .home_artists_section_heading{
-
+  .home_artists_section_heading {
     /* color: #fff; */
     padding: 10px;
     font-size: 36px;
     width: 100%;
     margin: 00 auto;
+  }
 
-}
+  .vwall-artists-btn {
+    text-align: center;
+  }
 
+  .full_lineup_button {
+    width: 95%;
+  }
 }

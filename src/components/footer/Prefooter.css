@@ -232,9 +232,21 @@
   }
 
 
-  .prefooter_form {
 
-    flex-direction: column-reverse;
+    /* Keep normal order */
+    .prefooter_form {
+      flex-direction: column;
+    }
+  
+    /* Checkbox BEFORE button */
+    .prefooter_checkbox {
+      order: 1;
+    }
+  
+    /* Button AFTER checkbox */
+    .prefooter_form button {
+      order: 2;
+    }
 
-}
+
 }

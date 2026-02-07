@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="footer-box1">
             <ul>
               <li>
-                <Link to="/about">Home</Link>
+                <Link to="/">Home</Link>
               </li>
 
               {/* <li>
@@ -41,11 +41,11 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link to="/photos">Photos</Link>
+                <Link to="/albums">Photos</Link>
               </li>
 
               <li>
-                <Link to="/artists">Artist</Link>
+                <Link to="/artists">Artists</Link>
               </li>
 
               {/* <li>
@@ -96,7 +96,7 @@ const Footer = () => {
               </li>
 
                    <li>
-                <Link to="/ugc">UGC</Link>
+                <Link to="/creators">Creators</Link>
               </li> 
 
               {/* <li>

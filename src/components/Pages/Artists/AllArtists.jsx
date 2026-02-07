@@ -10,7 +10,10 @@ const AllArtists = () => {
     <div>
       <Navbartoplogo />
 
+
+
       <div className="main_artists_cards_cont">
+      <div className="allartists-heading">ARTISTS</div>
         <ArtistsCard />
       </div>
 

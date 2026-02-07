@@ -24,11 +24,7 @@ const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
-
-
   const [showtexttwo, setShowtexttwo] = useState(false);
-
-
 
   setTimeout(() => {
     setShowtexttwo(true);
@@ -107,8 +103,6 @@ const Homepage = () => {
                 disabled={false}
               />
             </p>
-
-     
 
             {showtexttwo && (
               <div className="vdoheadhomepage">

@@ -32,10 +32,13 @@ import ArtistPage from "./components/Pages/Artists/ArtistPage";
 import Albumnew from "./components/Pages/Albums/Albumnew";
 import Albumphotos from "./components/Pages/Albums/Albumphotos";
 import AllArtists from "./components/Pages/Artists/AllArtists";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<ContactUs />} />
@@ -48,7 +51,7 @@ function App() {
         <Route path="/venues" element={<Venues />} />
 
         <Route path="/ugr" element={<UGR />} />
-        <Route path="/ugc" element={<UGC />} />
+        <Route path="/creators" element={<UGC />} />
 
         <Route path="/careers" element={<Careers />} />
 

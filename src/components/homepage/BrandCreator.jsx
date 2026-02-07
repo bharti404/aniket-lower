@@ -3,10 +3,10 @@ import "./BrandCreator.css";
 import { Link } from "react-router-dom";
 
 const items = [
-  { text: "ARE YOU A CREATOR ?", link: "/ugc" },
-  { text: "GET IN TOUCH" },
-  { text: "ARE YOU A CREATOR ?", link: "/ugc" },
-  { text: "GET IN TOUCH" },
+  { text: "ARE YOU A CREATOR ?", link: "/creators" },
+  { text: "GET IN TOUCH" , link:"/creators" },
+  { text: "ARE YOU A CREATOR ?", link: "/creators" },
+  { text: "GET IN TOUCH", link:"/creators"  },
 ];
 
 const BrandCreator = () => {

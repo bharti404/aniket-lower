@@ -65,15 +65,15 @@
   text-align: center;
   padding: 15px;
 
-  opacity: 0;
+  opacity: 1;
   transition: 0.3s ease;
 
 }
 
 /* Show Overlay */
-.beAlbumnew_card:hover .beAlbumnew_overlay {
+/* .beAlbumnew_card:hover .beAlbumnew_overlay {
   opacity: 1;
-}
+} */
 
 
 

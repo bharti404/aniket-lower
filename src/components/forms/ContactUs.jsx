@@ -89,7 +89,7 @@ const ContactUs = () => {
             team will respond soon.
           </p>
 
-          <Link to="/faq">
+          <Link to="/support">
             <span className="faqLink">See FAQ's</span>
           </Link>
         </div>

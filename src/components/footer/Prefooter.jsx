@@ -105,7 +105,6 @@ const Prefooter = () => {
     }
   };
 
-
   return (
     <section className="prefooter">
       <div className="prefooter_main">
@@ -124,7 +123,7 @@ const Prefooter = () => {
             target="_blank"
             rel="noreferrer"
           >
-          <img src={Taski} alt="Partner 2" />
+            <img src={Taski} alt="Partner 2" />
           </a>
         </div>
 
@@ -154,22 +153,6 @@ const Prefooter = () => {
               </button>
             </div>
 
-            {/* City Dropdown */}
-            {/* <select
-              name="city"
-              value={formData.city}
-              onChange={handleChange}
-              className="prefooter_city"
-              required
-            >
-              <option value="">Select your city*</option>
-
-              {cities.map((city, index) => (
-                <option key={index} value={city}>
-                  {city}
-                </option>
-              ))}
-            </select> */}
 
             <select
               name="city"
@@ -199,11 +182,6 @@ const Prefooter = () => {
               </span>
             </label>
           </form>
-
-          {/* <p className="prefooter_privacy">
-            By submitting this form, you agree to our{" "}
-            <span>Privacy Policy</span>.
-          </p> */}
         </div>
       </div>
     </section>
