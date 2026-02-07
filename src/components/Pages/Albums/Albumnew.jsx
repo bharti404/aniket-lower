@@ -6,6 +6,7 @@ import Footer from "../../footer/Footer";
 import Navbartoplogo from "../../navbar/Navbartoplogo";
 import { useNavigate } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
+import BrandLogoCarouselforAlbum from "../../brandscarousel/BrandLogoCarouselforAlbum";
 
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
@@ -83,6 +84,7 @@ const Albumnew = () => {
         <p className="albumphotopage_heading">ALBUMS</p>
 
 
+<BrandLogoCarouselforAlbum />
         <p className="album_page_new_top_txt">
           Easily <span>view, share</span> and <span>download</span> your photos
         </p>
