@@ -33,6 +33,8 @@ import Albumnew from "./components/Pages/Albums/Albumnew";
 import Albumphotos from "./components/Pages/Albums/Albumphotos";
 import AllArtists from "./components/Pages/Artists/AllArtists";
 import ScrollToTop from "./components/ScrollToTop";
+import UniversityPartners from "./components/forms/UniversityPartners";
+import Advertisewithus from "./components/forms/Advertisewithus";
 
 function App() {
   return (
@@ -87,6 +89,10 @@ function App() {
         <Route path="/new-artist-demo/:id" element={<ArtistPage />} />
 
         <Route path="/albums" element={<Albumnew />} />
+
+        <Route path="/university-partners" element={<UniversityPartners />} />
+
+        <Route path="/advertise-with-us" element={<Advertisewithus />} />
 
         {/* <Route path="/admin" element={<AlbumUpload />} /> */}
 

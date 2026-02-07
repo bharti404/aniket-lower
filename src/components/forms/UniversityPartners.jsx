@@ -1,22 +1,22 @@
 import React, { useState } from "react";
-import "./Societies.css";
+import "./UniversityPartners.css";
 import axios from "axios";
 
-import Prefooter from "./Prefooter";
-import Footer from "./Footer";
+import Prefooter from "../footer/Prefooter";
+import Footer from "../footer/Footer";
 import Navbartoplogo from "../navbar/Navbartoplogo";
 
-const Societies = () => {
-
+const UniversityPartners = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     data: "",
-    formType: "societies",
+    formType: "university-partner",
   });
 
   const baseUrl = process.env.REACT_APP_BASE_URL;
+
   const [loading, setLoading] = useState(false);
 
   // Handle Change
@@ -32,33 +32,32 @@ const Societies = () => {
     e.preventDefault();
 
     if (!formData.name || !formData.phone || !formData.email) {
-      alert("Please fill all fields");
+      alert("Please fill all required fields");
       return;
     }
 
     try {
       setLoading(true);
 
-      await axios.post(
-        `${baseUrl}/api/form/${formData.formType}`,
-        {
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          data: formData.data,
-        }
-      );
+      const res = await axios.post(`${baseUrl}/api/form/${formData.formType}`, {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        data: formData.data,
+      });
 
-      alert("Societies enquiry sent 🎓");
+      console.log("Response:", res.data);
 
+      alert("University enquiry sent 🎓");
+
+      // Reset
       setFormData({
         name: "",
         phone: "",
         email: "",
         data: "",
-        formType: "societies",
+        formType: "university-partner",
       });
-
     } catch (err) {
       console.error(err);
       alert("Something went wrong");
@@ -71,23 +70,27 @@ const Societies = () => {
     <>
       <Navbartoplogo />
 
-      <div className="soc_wrapper">
-        <div className="soc_container">
+      <div className="universityWrapper">
+        <div className="universityContainer">
+          {/* Left Content */}
+          <div className="universityLeft">
+            <p className="smallTitle">Why Universities partner with</p>
 
-          {/* Left */}
-          <div className="soc_left">
+            <h1>Lowercase</h1>
 
-            <h1 className="soc_title">Societies</h1>
-
-            <p className="soc_highlight">
-              Tell us what you're planning, and we'll help bring it to life.
+            <p className="desc">
+              Universities and student organisations work with us because we
+              provide:
             </p>
 
+            <p className="unvrsty_left_btm_txt">
+              Trusted Student Experiences Professional Delivery Strong Student
+              Reach Safe & Compliant Event Standards
+            </p>
           </div>
 
-          {/* Right */}
-          <form className="soc_form" onSubmit={submit}>
-
+          {/* Right Form */}
+          <form className="bwForm" onSubmit={submit}>
             <input
               type="text"
               name="name"
@@ -95,7 +98,6 @@ const Societies = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="soc_input"
             />
 
             <input
@@ -105,7 +107,6 @@ const Societies = () => {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="soc_input"
             />
 
             <input
@@ -115,29 +116,21 @@ const Societies = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="soc_input"
             />
 
             <textarea
               name="data"
-              placeholder="Tell us about your event (date, guests, vibe...)"
+              placeholder="Tell us about your university partnership plans"
               rows="4"
               value={formData.data}
               onChange={handleChange}
               required
-              className="soc_textarea"
             />
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="soc_button"
-            >
+            <button type="submit" disabled={loading}>
               {loading ? "Sending..." : "Submit"}
             </button>
-
           </form>
-
         </div>
       </div>
 
@@ -147,4 +140,4 @@ const Societies = () => {
   );
 };
 
-export default Societies;
+export default UniversityPartners;

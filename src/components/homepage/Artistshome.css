@@ -49,8 +49,8 @@
 
 .home_artists_section_heading {
   padding: 10px 15px;
-  background-color: yellow;
-  font-size: 38px;
+  background-color: #fff;
+  font-size: 28px;
   font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
@@ -126,7 +126,7 @@
 .full_lineup_button {
   padding: 10px 15px;
   background-color: #fff;
-  font-size: 38px;
+  font-size: 24px;
   font-weight: 700;
   border-radius: 5px;
   cursor: pointer;

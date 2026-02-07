@@ -1,0 +1,176 @@
+.universityWrapper {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 20vh auto 10vh auto;
+  }
+  
+  /* Container */
+  .universityContainer {
+    width: 50%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+  }
+  
+  /* Left Section */
+  .universityLeft {
+    width: 45%;
+    color: #fff;
+  }
+  
+  /* Small Heading */
+  .smallTitle {
+    color: #ff004f;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
+  /* Main Title */
+  .universityLeft h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  /* Description */
+  .universityLeft .desc {
+    font-size: 15px;
+    color: #ccc;
+    margin-bottom: 15px;
+  }
+  
+  /* Benefits List */
+  .universityLeft ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .universityLeft ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    position: relative;
+    padding-left: 18px;
+  }
+  
+  .universityLeft ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #fff;
+  }
+
+  .unvrsty_left_btm_txt{
+
+    font-weight: 700;
+  }
+  
+  /* Form (Reuse BW) */
+  .bwForm {
+    width: 50%;
+    max-width: 420px;
+    margin-left: auto;
+  }
+  
+  /* Inputs */
+  .bwForm input,
+  .bwForm textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    padding: 14px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .bwForm input::placeholder,
+  .bwForm textarea::placeholder {
+    color: #777;
+  }
+  
+  /* Focus */
+  .bwForm input:focus,
+  .bwForm textarea:focus {
+    border-color: #fff;
+  }
+  
+  /* Button */
+  .bwForm button {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    padding: 14px;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .bwForm button:hover {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .universityContainer {
+      width: 80%;
+      gap: 50px;
+    }
+  
+    .universityLeft h1 {
+      font-size: 36px;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .universityWrapper {
+      margin: 120px auto 60px;
+    }
+  
+    .universityContainer {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      text-align: center;
+    }
+  
+    .universityLeft,
+    .bwForm {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .universityLeft ul {
+      text-align: left;
+      display: inline-block;
+    }
+  
+    .universityLeft h1 {
+      font-size: 28px;
+    }
+  
+    .bwForm input,
+    .bwForm textarea {
+      font-size: 16px;
+    }
+  }
+  
+  /* Small Phones */
+  @media (max-width: 480px) {
+    .universityLeft h1 {
+      font-size: 24px;
+    }
+  }
+  

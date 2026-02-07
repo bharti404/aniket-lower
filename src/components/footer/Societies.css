@@ -1,57 +1,140 @@
-.societiesWrapper {
-    background: #000;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 40px 20px;
+/* Wrapper */
+.soc_wrapper {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 20vh auto 10vh;
+}
+
+/* Container */
+.soc_container {
+  width: 50%;
+  max-width: 1000px;
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* Left Section */
+.soc_left {
+  width: 45%;
+  color: #fff;
+}
+
+.soc_title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Blue Text */
+.soc_highlight {
+  font-size: 32px;
+  font-weight: 500;
+  color: #4ecbff;
+  line-height: 1.4;
+}
+
+/* Form */
+.soc_form {
+  width: 50%;
+  max-width: 420px;
+}
+
+/* Inputs */
+.soc_input,
+.soc_textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: #fff;
+  padding: 14px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  outline: none;
+}
+
+.soc_input::placeholder,
+.soc_textarea::placeholder {
+  color: #777;
+}
+
+.soc_input:focus,
+.soc_textarea:focus {
+  border-color: #fff;
+}
+
+/* Button */
+.soc_button {
+  width: 100%;
+  background: #fff;
+  color: #000;
+  padding: 14px;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.soc_button:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .soc_container {
+    width: 80%;
+    gap: 50px;
   }
-  
-  .bwForm {
-    max-width: 420px;
+
+  .soc_title {
+    font-size: 36px;
+  }
+
+  .soc_highlight {
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .soc_wrapper {
+    margin: 120px auto 60px;
+  }
+
+  .soc_container {
     width: 100%;
-    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
   }
-  
-  .bwForm h2 {
-    margin-bottom: 8px;
-    font-size: 24px;
-  }
-  
-  .subtitle {
-    font-size: 14px;
-    color: #aaa;
-    margin-bottom: 20px;
-  }
-  
-  .bwForm input,
-  .bwForm textarea {
+
+  .soc_left,
+  .soc_form {
     width: 100%;
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 12px;
-    margin-bottom: 14px;
   }
-  
-  .bwForm input::placeholder,
-  .bwForm textarea::placeholder {
-    color: #888;
+
+  .soc_highlight {
+    font-size: 18px;
   }
-  
-  .bwForm button {
-    width: 100%;
-    background: #fff;
-    color: #000;
-    padding: 12px;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
+
+  .soc_form {
+    margin: auto;
   }
-  
-  .bwForm button:hover {
-    background: #000;
-    color: #fff;
-    border: 1px solid #fff;
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .soc_title {
+    font-size: 28px;
   }
-  
+
+  .soc_highlight {
+    font-size: 16px;
+  }
+}
