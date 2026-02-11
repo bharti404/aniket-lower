@@ -1,135 +1,149 @@
+
+
 import React, { useState } from "react";
-import "./ContactUs.css";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./Career.css";
 
 import Prefooter from "../footer/Prefooter";
 import Footer from "../footer/Footer";
 import Navbartoplogo from "../navbar/Navbartoplogo";
 
-import SEO from "../SEO";
-
 const Careers = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    data: "",
-    formType: "careers",
-  });
+  const navigate = useNavigate();
+  const [filter, setFilter] = useState("All");
 
-  const baseUrl = process.env.REACT_APP_BASE_URL;
-  const [loading, setLoading] = useState(false);
+  const jobs = [
+    {
+      title: "Customer Success Manager",
+      description:"Lead and deliver Lowercase Events nights from start to finish—owning operations on the ground, coordinating teams and talent, and making sure every event runs smoothly from doors open to close.",
+      tag: "Marketing",
+      date: "Nov 6, 2025",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/event-manager",
+    },
+    {
+      title: "Promoter",
+      tag: "Marketing",
+      date: "Nov 6, 2025",
+      description:"Build student communities and power the buzz behind Lowercase Events—promoting nights, driving ticket sales, and repping the brand on campus and at events.",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/promoter",
+    },
+    {
+      title: "Summer Internship",
+      tag: "Marketing",
+      date: "Nov 6, 2025",
+      description:"A hands-on summer internship supporting campaigns, Freshers planning, and live event launches—get real experience across marketing, ops, and growth.",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/summer-internship",
+    },
+    {
+      title: "Content Creator",
+      tag: "Marketing",
+      date: "Nov 6, 2025",
+      description:"Create social-first content that captures the energy of Lowercase—filming live moments, DJ sets, and crowd vibes to shape how the brand shows up online",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/content-creator",
+    },
+    {
+      title: "Photographer / Videographer",
+      tag: "Marketing",
+      date: "Nov 6, 2025",
+       description:"Capture the energy of Lowercase nights with high-quality photo and video—documenting the crowd, performers, and atmosphere for web and social.",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/photographer-videographer",
+    },
+    {
+      title: "Graphic Designer",
+      tag: "Marketing",
+      date: "Nov 6, 2025",
+      description:"Design the visual language of Lowercase—creating bold flyers, socials, and campaign assets that define how the brand looks and feels.",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/graphic-designer",
+    },
+    {
+      title: "Video Editor",
+      tag: "Marketing",
+      description:"Edit high-impact nightlife content for Lowercase—turning event footage into reels, aftermovies, and campaign visuals that hit on social.",
+      date: "Nov 6, 2025",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/video-editor",
+    },
+    {
+      title: "Artist & Talent Booker",
+      tag: "Marketing",
+      date: "Nov 6, 2025",
+      description:"Curate the sound and talent behind Lowercase—booking DJs and performers, shaping lineups, and keeping the culture sharp.",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/artist-talent-booker",
+    },
+    {
+      title: "Partnerships & Sponsorship Manager",
+      tag: "Marketing",
+      description:"Develop strategic partnerships across venues, brands, and student networks to drive growth and sponsorship opportunities for Lowercase.",
+      date: "Nov 6, 2025",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/partnerships-sponsorship-manager",
+    },
+    {
+      title: "Web & Digital Account Manager",
+      tag: "Marketing",
+      description:"Own the digital experience behind Lowercase—managing websites, ticket funnels, and content to keep everything converting smoothly.",
+      date: "Nov 6, 2025",
+      location: "📍London + UK event cities (night work required)",
+      route: "/apply/web-digital-account-manager",
+    },
+  ];
 
-  // Handle Input Change
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  // Handle Form Submit
-  const submit = async (e) => {
-    e.preventDefault();
-
-    // Basic Validation
-    if (!formData.name || !formData.email || !formData.phone) {
-      alert("Please fill all required fields");
-      return;
-    }
-
-    try {
-      setLoading(true);
-
-      const response = await axios.post(
-        `${baseUrl}/api/form/${formData.formType}`,
-        {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          data: formData.data,
-        }
-      );
-
-      console.log("Response:", response.data);
-
-      alert("Application submitted successfully!");
-
-      // Reset Form
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        data: "",
-        formType: "careers",
-      });
-    } catch (error) {
-      console.error("Error:", error);
-
-      alert("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  const filteredJobs =
+    filter === "All"
+      ? jobs
+      : jobs.filter((job) => job.title === filter);
 
   return (
     <>
-
-<SEO
-  title="Careers"
-  description="Join our team and grow with Lowercase Events."
-  url="/careers"
-/>
-
       <Navbartoplogo />
 
-      <div className="bwformpage">
-        <form className="bwForm" onSubmit={submit}>
-          <h2>Careers</h2>
+      <div className="career-page">
+        <div className="career-header">
+          <span className="open-badge">OPEN ROLES</span>
+          <h1>Join our team</h1>
+        </div>
 
-          {/* Name */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+        <div className="filter">
+          <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+            <option value="All">All</option>
+            {jobs.map((job) => (
+              <option key={job.title} value={job.title}>
+                {job.title}
+              </option>
+            ))}
+          </select>
+        </div>
 
-          {/* Phone */}
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Mobile Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+        {filteredJobs.map((job) => (
+          <div className="job-card" key={job.title}>
+            <div className="job-card-header">
+              <div className="title-wrap">
+                <h2>{job.title}</h2>
+                <span className="tag-glow">{job.tag.toUpperCase()}</span>
+              </div>
+              <span className="date">{job.date}</span>
+            </div>
 
-          {/* Email */}
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+            <p className="description">
+              {job.description}
+            </p>
 
-          {/* Message */}
-          <textarea
-            name="data"
-            placeholder="Why should we hire you?"
-            value={formData.data}
-            onChange={handleChange}
-          />
+            <div className="meta">
+              <span>{job.location}</span>
+            </div>
 
-          {/* Button */}
-          <button type="submit" disabled={loading}>
-            {loading ? "Sending..." : "Apply"}
-          </button>
-        </form>
+            <button className="apply-btn" onClick={() => navigate(job.route)}>
+              Apply Now
+            </button>
+          </div>
+        ))}
       </div>
 
       <Prefooter />

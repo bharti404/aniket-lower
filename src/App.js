@@ -36,14 +36,14 @@ import ScrollToTop from "./components/ScrollToTop";
 import UniversityPartners from "./components/forms/UniversityPartners";
 import Advertisewithus from "./components/forms/Advertisewithus";
 import AnalyticsTracker from "./AnalyticsTracker";
+import JobApply from "./components/forms/JobApply";
 
 function App() {
   return (
     <BrowserRouter>
+      <AnalyticsTracker />
 
-<AnalyticsTracker />
-
-    <ScrollToTop />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<ContactUs />} />
@@ -60,11 +60,12 @@ function App() {
 
         <Route path="/careers" element={<Careers />} />
 
+        <Route path="/apply/:jobSlug" element={<JobApply />} />
+
         <Route path="/advertise" element={<Advertise />} />
 
         <Route path="/about" element={<About />} />
         {/* <Route path="/artist" element={<Artist />} /> */}
-      
 
         {/* <Route path="/newartist" element={<NewArtist />} /> */}
         <Route path="/artists" element={<AllArtists />} />

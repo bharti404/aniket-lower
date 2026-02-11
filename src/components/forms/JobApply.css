@@ -1,0 +1,164 @@
+/* Main Container */
+.contactWrapper {
+    background: #000;
+  
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  
+    gap: 100px;
+    padding: 50px;
+  
+    margin: 20vh auto 10vh auto;
+  }
+  
+  /* Left Side */
+  .contactLeft {
+    color: #fff;
+    max-width: 420px;
+    /* padding: 32px 36px;   */
+     margin-bottom: 18px;
+          
+  }
+  
+  .contactLeft h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+          /* more space under title */
+  }
+  
+  .contactLeft h3 {
+    margin-top: 28px;           
+    margin-bottom: 12px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2da9ff;
+  }
+  
+  
+  .contactLeft p {
+    font-size: 16px;
+    line-height: 1.7;           /* makes paragraphs breathe */
+    margin-bottom: 18px;
+     color: #e6f3ff;            /* slightly softer white */
+    max-width: 380px;
+  }
+  
+  .contactLeft ul {
+    padding-left: 22px;
+    margin-bottom: 24px;
+  }
+  
+  .contactLeft li {
+    font-size: 16px;
+    line-height: 1.5;           /* big readability boost */
+    margin-bottom: 10px;
+   
+    color: rgba(255, 255, 255, 0.75);
+  
+  }
+  
+  
+  
+  .faqLink {
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .faqLink:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Right Form */
+  .bwForm {
+  
+    background: transparent;
+  }
+  
+  /* Inputs */
+  .bwForm input,
+  .bwForm textarea {
+    width: 100%;
+    background: transparent;
+  
+    border: 1px solid #666;
+    color: #fff;
+  
+    padding: 14px;
+    margin-bottom: 18px;
+  
+    font-size: 15px;
+  }
+  
+  /* Textarea */
+  .bwForm textarea {
+    min-height: 120px;
+    resize: none;
+  }
+  
+  /* Placeholder */
+  .bwForm input::placeholder,
+  .bwForm textarea::placeholder {
+    color: #777;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  
+  
+  /* Button */
+  .bwForm button {
+    width: 100%;
+    padding: 14px;
+  
+    background: #fff;
+    color: #000;
+  
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .bwForm button:hover {
+    background: #eee;
+  }
+  
+  .fileBox {
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 14px;
+    color: #fff;
+    background: black;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 12px;
+  }
+  
+  
+  
+  .fileBox:active {
+    transform: scale(0.99);
+  }
+  
+  
+  
+  /* Mobile Responsive */
+  @media (max-width: 900px) {
+  
+    .contactWrapper {
+      flex-direction: column;
+      gap: 50px;
+      text-align: center;
+    }
+  
+    .contactLeft h1 {
+      font-size: 34px;
+    }
+  
+    .bwForm {
+      width: 100%;
+    }
+  }
