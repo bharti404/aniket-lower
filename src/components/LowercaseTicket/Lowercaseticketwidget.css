@@ -68,3 +68,19 @@
     }
 
   }
+
+
+  /* Fix Fatsoma iframe gap */
+
+.fatsoma-widget-iframe {
+    width: 100% !important;
+    min-height: 300px !important;
+    height: auto !important;
+    border: none !important;
+    display: block;
+  }
+  
+  .fatsoma_tkt_wgt_main {
+    overflow: hidden;
+  }
+  

@@ -38,6 +38,7 @@ import Advertisewithus from "./components/forms/Advertisewithus";
 import AnalyticsTracker from "./AnalyticsTracker";
 import JobApply from "./components/forms/JobApply";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -75,7 +76,14 @@ function App() {
 
         <Route path="/collab" element={<Collaborations />} />
         <Route path="/photos" element={<Photos />} />
+
+
         <Route path="/events" element={<Events />} />
+
+
+
+
+
 
         <Route path="/tkt" element={<FatsomaWidget />} />
 
