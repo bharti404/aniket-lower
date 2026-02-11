@@ -38,7 +38,6 @@ import Advertisewithus from "./components/forms/Advertisewithus";
 import AnalyticsTracker from "./AnalyticsTracker";
 import JobApply from "./components/forms/JobApply";
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -66,32 +65,19 @@ function App() {
         <Route path="/advertise" element={<Advertise />} />
 
         <Route path="/about" element={<About />} />
-        {/* <Route path="/artist" element={<Artist />} /> */}
 
-        {/* <Route path="/newartist" element={<NewArtist />} /> */}
         <Route path="/artists" element={<AllArtists />} />
 
-        {/* <Route path="/artist/details" element={<Artistdetail />} /> */}
         <Route path="/artist/:id" element={<ArtistPage />} />
 
         <Route path="/collab" element={<Collaborations />} />
         <Route path="/photos" element={<Photos />} />
 
-
         <Route path="/events" element={<Events />} />
-
-
-
-
-
 
         <Route path="/tkt" element={<FatsomaWidget />} />
 
-        {/* <Route path="/albums" element={<Albumshow />} /> */}
         <Route path="/photobyalbum/:id" element={<Albumphotos />} />
-
-        {/* HIDING BELOW ROUTE FOR A WHILE */}
-        {/* <Route path="/photobyalbum/:id" element={<Photobyalbum />} /> */}
 
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
@@ -105,8 +91,6 @@ function App() {
         <Route path="/university-partners" element={<UniversityPartners />} />
 
         <Route path="/advertise-with-us" element={<Advertisewithus />} />
-
-        {/* <Route path="/admin" element={<AlbumUpload />} /> */}
 
         <Route
           path="/admin"
