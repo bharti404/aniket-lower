@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   padding: 60px 20px;
+  padding-top: 120px;
 }
 
 /* MAIN CONTAINER */
@@ -23,7 +24,7 @@ align-items: flex-start;
 }
 
 .ugcLeft h1 {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -84,30 +85,31 @@ align-items: flex-start;
   border: 1px solid #fff;
 }
 
-/* RESPONSIVE */
-/* @media (max-width: 768px) {
+/* ===== RESPONSIVE ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
   .ugcContainer {
-    grid-template-columns: 1fr;
+    width: 80%;
     gap: 40px;
   }
 
   .ugcLeft h1 {
     font-size: 36px;
   }
-} */
+}
 
-/* bharti */
-
-/* RESPONSIVE */
+/* Mobile */
 @media (max-width: 768px) {
   .ugcWrapper {
     padding: 40px 16px;
-    padding-top: 100px;
+    padding-top: 80px;
   }
 
   .ugcContainer {
     width: 100%;
-    flex-direction: column;   /* STACK vertically */
+    flex-direction: column;
+    align-items: center;
     gap: 40px;
   }
 
@@ -117,11 +119,10 @@ align-items: flex-start;
 
   .ugcLeft h1 {
     font-size: 32px;
-    line-height: 1.2;
   }
 
   .ugcLeft .highlight {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .ugcLeft p {
@@ -131,10 +132,64 @@ align-items: flex-start;
   .bwForm {
     max-width: 100%;
   }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .ugcLeft h1 {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 
   .bwForm input,
   .bwForm textarea {
-    font-size: 16px; /* prevents iOS zoom */
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .bwForm button {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+
+/* @media (max-width: 768px) {
+  .ugcWrapper {
+    padding: 40px 16px;
+    padding-top: 100px;
+  }
+
+  .ugcContainer {
+    width: 100%;
+    flex-direction: column;   
+    gap: 40px;
+  }
+
+  .ugcLeft {
+    text-align: center;
+  }
+
+  .ugcLeft h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .ugcLeft .highlight {
+    font-size: 16px;
+  }
+
+  .ugcLeft p {
+    font-size: 15px;
+  }
+
+  .bwForm {
+    max-width: 100%;
+  }
+
+  .bwForm input,
+  .bwForm textarea {
+    font-size: 16px; 
     padding: 14px;
   }
 
@@ -144,13 +199,13 @@ align-items: flex-start;
   }
 }
 
-/* Extra small phones */
+
 @media (max-width: 480px) {
   .ugcLeft h1 {
-    font-size: 26px;
+    font-size: 34px;
   }
 
   .ugcLeft .highlight {
-    font-size: 13px;
+    font-size: 16px;
   }
-}
+} */

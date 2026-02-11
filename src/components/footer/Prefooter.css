@@ -228,7 +228,7 @@ justify-content: space-between;
 /* FOR CHECK BOX END */
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .prefooter {
     padding: 60px 20px;
   }

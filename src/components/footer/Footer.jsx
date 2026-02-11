@@ -20,10 +20,7 @@ const Footer = () => {
             CONTACT<span>@</span>LOWERCASEEVENTS.CO.UK <strong>|</strong>{" "}
           </p>
         </div>
-        {/* <div className="lisenced-note">
-          COPYRIGHT © 2024 Lower Case Events | Lower Case Events ltd. ALL RIGHTS
-          RESERVED.
-        </div> */}
+       
 
         <div className="footer">
           <div className="footer-box1">

@@ -8,16 +8,12 @@
     position: relative;
     padding: 50px 10px;
   }
+
+
+
+
+
   
-
-  /* .artist_name{
-
-    color: #fff;
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-  } */
-
   .artist_name {
     position: absolute;
     inset: 0;
