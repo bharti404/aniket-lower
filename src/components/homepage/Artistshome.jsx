@@ -24,7 +24,7 @@ const Artists = () => {
         </div>
 
         <div className="vwall-artists-btn">
-          <button className="full_lineup_button" onClick={() => navigate("/artists")}>View All Artists</button>
+          <button className="full_lineup_button" onClick={() => navigate("/artists")}cd>View All Artists</button>
         </div>
       </div>
 
