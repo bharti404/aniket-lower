@@ -88,7 +88,7 @@
   font-weight: 600;
 }
 
-.gallery {
+ .gallery {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
@@ -112,11 +112,13 @@
 .side-images img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
-  object-position: top;
+  object-fit:cover;
+  object-position:top center;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-}
+} 
+
+
 
 
 /* ================= BIO ================= */

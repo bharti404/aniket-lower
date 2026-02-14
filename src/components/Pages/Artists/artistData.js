@@ -21,7 +21,7 @@ import k3 from "../../assests/Artists/Kehlani/K3.jpg";
 // Party
 import p1 from "../../assests/Artists/PARTYNEXTDOOR/PARTY1.jpg";
 import p2 from "../../assests/Artists/PARTYNEXTDOOR/PARTY2.jpg";
-import p3 from "../../assests/Artists/PARTYNEXTDOOR/PARTY3.jpg";
+import p3 from "../../assests/Artists/PARTYNEXTDOOR/PARTY.jpg";
 
 // Don
 import d1 from "../../assests/Artists/Don_Toliver/DON1.jpg";
