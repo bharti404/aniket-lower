@@ -76,13 +76,14 @@
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    
   }
   
   /* Heading */
   .event-heading {
     color: #fff;
     font-size: 36px;
-    margin: 180px auto 20px auto;
+    margin: 140px auto 40px auto;
     text-align: center;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
@@ -132,6 +133,9 @@
     flex-wrap: wrap;
   }
   
+  .margin{
+    margin-bottom: 180px;
+  }
   /* ---------- Tablet ---------- */
   @media screen and (max-width: 1024px) {
     .event-heading {
@@ -152,6 +156,9 @@
   
   /* ---------- Mobile ---------- */
   @media screen and (max-width: 768px) {
+    .margin{
+    margin-bottom:5px;
+  }
     .event-heading {
       font-size: 42px;
       margin: 120px auto 10px auto;

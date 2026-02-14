@@ -135,7 +135,7 @@ function JobApply() {
           <ul>
             {job.duties.map((item, i) => (
               <li key={i}>{item}</li>
-            ))}
+            ))} 
           </ul>
 
           <h3 className="looking">What we’re looking for</h3>
@@ -147,7 +147,7 @@ function JobApply() {
         </div>
 
         <div className="contactRight">
-         
+           <h1 className="contactRightHeading">Please fill the form</h1>
           <form className="bwForm" onSubmit={submit}>
             <input
               type="text"
@@ -159,7 +159,7 @@ function JobApply() {
             />
 
             <input
-              type="tel"
+              type="number"
               name="phone"
               placeholder="Mobile Number"
               value={formData.phone}

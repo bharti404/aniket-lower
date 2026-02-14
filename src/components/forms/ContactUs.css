@@ -1,4 +1,42 @@
 /* Main Container */
+/* Thank You Fullscreen Overlay */
+.thankyou-overlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: fadeInOut 0.5s ease forwards;
+}
+
+.thankyou-overlay p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  animation: textFade 0.5s ease forwards;
+}
+
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textFade {
+  to {
+    opacity: 1;
+  }
+}
+
 .contactWrapper {
   background: #000;
 

@@ -30,7 +30,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
+  padding-bottom: 180px;
   gap: 30px;
 }
 
@@ -85,15 +85,15 @@
 
   color: #fff;
 
-  padding: 14px 15px;
-  margin-bottom: 18px;
+  padding: 12px 12px;
+  margin-bottom: 1px;
 
   font-size: 15px;
   outline: none;
 }
 
 .bwForm textarea {
-  min-height: 120px;
+  min-height: 90px;
   resize: none;
 }
 

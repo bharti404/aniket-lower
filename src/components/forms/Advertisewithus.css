@@ -30,16 +30,16 @@
   }
   
   .brandLeft h1 {
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   
   .desc {
     font-size: 15px;
     color: #ccc;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     line-height: 1.6;
   }
   

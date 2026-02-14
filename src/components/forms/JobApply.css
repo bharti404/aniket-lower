@@ -43,7 +43,7 @@
     line-height: 1.7;           /* makes paragraphs breathe */
     margin-bottom: 18px;
      color: #e6f3ff;            /* slightly softer white */
-    max-width: 380px;
+    max-width: 100%;
   }
   
   .contactLeft ul {
@@ -73,6 +73,13 @@
   
   
   /* Right Form */
+  .contactRightHeading{
+    font-size: 28px;
+    color: #fff; 
+   margin-bottom: 20px;  
+
+
+  }
   .bwForm {
   
     background: transparent;
@@ -171,7 +178,7 @@
   
   
   /* Mobile Responsive */
-  @media (max-width: 900px) {
+  /* @media (max-width: 900px) {
   
     .contactWrapper {
       flex-direction: column;
@@ -186,7 +193,7 @@
     .bwForm {
       width: 100%;
     }
-  }
+  } */
 
   /* Tablet */
 @media (max-width: 1024px) {
@@ -201,17 +208,54 @@
   }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+
+@media (max-width: 600px) {
   .contactWrapper {
     flex-direction: column;
     align-items: center;
     text-align: left;
     gap: 40px;
+    padding: 24px 16px;
+    margin: 12vh auto 6vh auto;
+  }
+
+  .contactLeft,
+  .contactRight {
+    max-width: 100%;
+  }
+
+  .contactLeft ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .contactLeft li {
+    padding-left: 0;
+    font-size: 14px;
+  }
+}
+
+
+/* Mobile */
+ @media (max-width: 768px) {
+  .contactWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
     padding: 30px 20px;
     margin: 15vh auto 6vh auto;
   }
 
+   .contactLeft ul {
+    list-style: none;      
+    padding-left: 0;      
+  }
+
+  .contactLeft li {
+    position: relative;
+    padding-left: 0;      
+  }
   .contactLeft {
     max-width: 100%;
   }
@@ -242,7 +286,7 @@
     font-size: 15px;
     padding: 12px;
   }
-}
+} 
 
 /* Small Phones */
 @media (max-width: 480px) {

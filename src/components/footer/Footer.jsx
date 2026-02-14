@@ -185,14 +185,14 @@ const Footer = () => {
       <div className="bottom_footer">
         <div className="lisenced-note">
           <span> ©</span> {currentYear} LOWERCASE EVENTS. ALL RIGHTS RESERVED. <br /> WEB
-          DEVELOPMENT <a href="/">LOWERCASE AGENCY</a>
+          DEVELOPMENT <a >LOWERCASE AGENCY</a>
         </div>
 
         <ul>
           <li>
-            <Link to={"/privacy-policy"}>Privacy Policy</Link>
+            <Link to={"/privacy-policy"} className="li">Privacy Policy</Link>
 
-            <Link to={"/terms-and-conditions"}>Terms & Conditions</Link>
+            <Link to={"/terms-and-conditions"} className="li">Terms & Conditions</Link>
           </li>
         </ul>
       </div>
